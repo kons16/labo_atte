@@ -101,6 +101,12 @@
 		BFDBC8D525207C4500FD46AF /* RegisterUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8D125207C4500FD46AF /* RegisterUserViewModel.swift */; };
 		BFDBC8D625207C4500FD46AF /* RegisterUserViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8D225207C4500FD46AF /* RegisterUserViewPresenter.swift */; };
 		BFDBC8DA25207C7900FD46AF /* RegisterUser.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBC8D925207C7900FD46AF /* RegisterUser.storyboard */; };
+		BFDBC8E325207DB600FD46AF /* CreateNewGroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8DE25207DB600FD46AF /* CreateNewGroupInfoViewController.swift */; };
+		BFDBC8E425207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8DF25207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift */; };
+		BFDBC8E525207DB600FD46AF /* CreateNewGroupInfoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8E025207DB600FD46AF /* CreateNewGroupInfoViewPresenter.swift */; };
+		BFDBC8E625207DB600FD46AF /* CreateNewGroupInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8E125207DB600FD46AF /* CreateNewGroupInfoViewModel.swift */; };
+		BFDBC8E725207DB600FD46AF /* CreateNewGroupInfoViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8E225207DB600FD46AF /* CreateNewGroupInfoViewBuilder.swift */; };
+		BFDBC8F125207E0400FD46AF /* CreateNewGroupInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBC8F025207E0400FD46AF /* CreateNewGroupInfo.storyboard */; };
 		BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDE9B5252054EC00DDBD44 /* R.generated.swift */; };
 		BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFEDE9D4252058D600DDBD44 /* .gitignore */; };
 		BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BFF2D36F2520610F00EF87AE /* .swiftlint.yml */; };
@@ -242,6 +248,12 @@
 		BFDBC8D125207C4500FD46AF /* RegisterUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserViewModel.swift; sourceTree = "<group>"; };
 		BFDBC8D225207C4500FD46AF /* RegisterUserViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterUserViewPresenter.swift; sourceTree = "<group>"; };
 		BFDBC8D925207C7900FD46AF /* RegisterUser.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterUser.storyboard; sourceTree = "<group>"; };
+		BFDBC8DE25207DB600FD46AF /* CreateNewGroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGroupInfoViewController.swift; sourceTree = "<group>"; };
+		BFDBC8DF25207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedUsersAndMeCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFDBC8E025207DB600FD46AF /* CreateNewGroupInfoViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGroupInfoViewPresenter.swift; sourceTree = "<group>"; };
+		BFDBC8E125207DB600FD46AF /* CreateNewGroupInfoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGroupInfoViewModel.swift; sourceTree = "<group>"; };
+		BFDBC8E225207DB600FD46AF /* CreateNewGroupInfoViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewGroupInfoViewBuilder.swift; sourceTree = "<group>"; };
+		BFDBC8F025207E0400FD46AF /* CreateNewGroupInfo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateNewGroupInfo.storyboard; sourceTree = "<group>"; };
 		BFEDE9B5252054EC00DDBD44 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFEDE9D4252058D600DDBD44 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BFF2D36F2520610F00EF87AE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -498,6 +510,7 @@
 			children = (
 				BFDBC8BD25207B4800FD46AF /* EditGroup */,
 				BFDBC8CE25207C4500FD46AF /* RegisterUser */,
+				BFDBC8DD25207DB600FD46AF /* CreateNewGroupInfo */,
 				BFB59B9D25204FFB008D66E6 /* TodayTodo */,
 				BF64A0A625204CB300A36711 /* MainTabBarController */,
 				BF64A0A525204CA500A36711 /* Storyboards */,
@@ -510,6 +523,7 @@
 			children = (
 				BFDBC8C825207B5700FD46AF /* EditGroup.storyboard */,
 				BF64A0C325204D3300A36711 /* MainTabBar.storyboard */,
+				BFDBC8F025207E0400FD46AF /* CreateNewGroupInfo.storyboard */,
 				BFDBC8D925207C7900FD46AF /* RegisterUser.storyboard */,
 				BFB59BB225205049008D66E6 /* TodayTodo.storyboard */,
 			);
@@ -613,6 +627,18 @@
 				BFDBC8D125207C4500FD46AF /* RegisterUserViewModel.swift */,
 			);
 			path = RegisterUser;
+			sourceTree = "<group>";
+		};
+		BFDBC8DD25207DB600FD46AF /* CreateNewGroupInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBC8E225207DB600FD46AF /* CreateNewGroupInfoViewBuilder.swift */,
+				BFDBC8DE25207DB600FD46AF /* CreateNewGroupInfoViewController.swift */,
+				BFDBC8E025207DB600FD46AF /* CreateNewGroupInfoViewPresenter.swift */,
+				BFDBC8E125207DB600FD46AF /* CreateNewGroupInfoViewModel.swift */,
+				BFDBC8DF25207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift */,
+			);
+			path = CreateNewGroupInfo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -735,6 +761,7 @@
 				BFDBC8C925207B5700FD46AF /* EditGroup.storyboard in Resources */,
 				BFDBC8DA25207C7900FD46AF /* RegisterUser.storyboard in Resources */,
 				BF64A01D2520455D00A36711 /* carthage.sh in Resources */,
+				BFDBC8F125207E0400FD46AF /* CreateNewGroupInfo.storyboard in Resources */,
 				BF64A0C425204D3300A36711 /* MainTabBar.storyboard in Resources */,
 				BF64A0182520450C00A36711 /* Cartfile in Resources */,
 				BF649FC3251F9BCD00A36711 /* Assets.xcassets in Resources */,
@@ -943,6 +970,7 @@
 				BFB59BBD25205161008D66E6 /* Group.swift in Sources */,
 				BFB59BD525205176008D66E6 /* CodableErrors.swift in Sources */,
 				BFDBC8D625207C4500FD46AF /* RegisterUserViewPresenter.swift in Sources */,
+				BFDBC8E725207DB600FD46AF /* CreateNewGroupInfoViewBuilder.swift in Sources */,
 				BFDBC8C225207B4800FD46AF /* EditGroupViewBuilder.swift in Sources */,
 				BF64A0AC25204CCE00A36711 /* MainTabBarViewController.swift in Sources */,
 				BF64A0AE25204CCE00A36711 /* MainTabBarViewPresenter.swift in Sources */,
@@ -952,6 +980,7 @@
 				BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */,
 				BFDBC8C525207B4800FD46AF /* EditGroupViewPresenter.swift in Sources */,
 				BF64A0BD25204D0C00A36711 /* ExUIViewController.swift in Sources */,
+				BFDBC8E525207DB600FD46AF /* CreateNewGroupInfoViewPresenter.swift in Sources */,
 				BFB59BDE25205176008D66E6 /* FieldValue+Encodable.swift in Sources */,
 				BFDBC8D325207C4500FD46AF /* RegisterUserViewController.swift in Sources */,
 				BFB59BDB25205176008D66E6 /* DocumentSnapshot+ReadDecodable.swift in Sources */,
@@ -960,9 +989,11 @@
 				BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */,
 				BF64A0AB25204CCE00A36711 /* MainTabBarViewModel.swift in Sources */,
 				BFB59BBC25205161008D66E6 /* User.swift in Sources */,
+				BFDBC8E425207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift in Sources */,
 				BFB59BD925205176008D66E6 /* DocumentReference+WriteEncodable.swift in Sources */,
 				BFB59BD725205176008D66E6 /* Transaction+WriteEncodable.swift in Sources */,
 				BFB59BD325205176008D66E6 /* Timestamp+Codable.swift in Sources */,
+				BFDBC8E325207DB600FD46AF /* CreateNewGroupInfoViewController.swift in Sources */,
 				BFB59BDC25205176008D66E6 /* DocumentID.swift in Sources */,
 				BFB59BDF25205176008D66E6 /* CodablePassThroughTypes.swift in Sources */,
 				BFB59BA725205006008D66E6 /* TodayTodoViewPresenter.swift in Sources */,
@@ -975,6 +1006,7 @@
 				BF64A0BF25204D0C00A36711 /* ExCollectionView.swift in Sources */,
 				BF64A0BB25204D0C00A36711 /* ExUIView.swift in Sources */,
 				BF64A0AD25204CCE00A36711 /* MainTabBarViewBuilder.swift in Sources */,
+				BFDBC8E625207DB600FD46AF /* CreateNewGroupInfoViewModel.swift in Sources */,
 				BF64A0C025204D0C00A36711 /* ExString.swift in Sources */,
 				BF64A0BC25204D0C00A36711 /* ExUIColor.swift in Sources */,
 				BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */,

@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F502BBD41DA9B844CA9BE57 /* Pods_labo_atte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C90140AFBAE522CB48D0606 /* Pods_labo_atte.framework */; };
+		403A1838267957DFE7331EAF /* Pods_labo_atte_labo_atteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 762A0223E466180A7AF82A89 /* Pods_labo_atte_labo_atteUITests.framework */; };
+		AD075E209D840F7A7AAD762E /* Pods_labo_atteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022A4D6365417D924F775985 /* Pods_labo_atteTests.framework */; };
 		BF649FBA251F9BCB00A36711 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FB9251F9BCB00A36711 /* AppDelegate.swift */; };
 		BF649FBC251F9BCB00A36711 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FBB251F9BCB00A36711 /* SceneDelegate.swift */; };
 		BF649FC3251F9BCD00A36711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF649FC2251F9BCD00A36711 /* Assets.xcassets */; };
@@ -89,6 +92,7 @@
 		BFB59BDF25205176008D66E6 /* CodablePassThroughTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BCF25205176008D66E6 /* CodablePassThroughTypes.swift */; };
 		BFB59BE025205176008D66E6 /* FirestoreDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */; };
 		BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD125205176008D66E6 /* ServerTimestamp.swift */; };
+		BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDE9B5252054EC00DDBD44 /* R.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +131,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		022A4D6365417D924F775985 /* Pods_labo_atteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_labo_atteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		444777903A2B2547033BAFCF /* Pods-labo_atte-labo_atteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atte-labo_atteUITests.debug.xcconfig"; path = "Target Support Files/Pods-labo_atte-labo_atteUITests/Pods-labo_atte-labo_atteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4513C12366773741CE470EC3 /* Pods-labo_atte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atte.release.xcconfig"; path = "Target Support Files/Pods-labo_atte/Pods-labo_atte.release.xcconfig"; sourceTree = "<group>"; };
+		56978C81962D06300CF9C0F2 /* Pods-labo_atte-labo_atteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atte-labo_atteUITests.release.xcconfig"; path = "Target Support Files/Pods-labo_atte-labo_atteUITests/Pods-labo_atte-labo_atteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5DA451735FFB2CA4435EAF3F /* Pods-labo_atte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atte.debug.xcconfig"; path = "Target Support Files/Pods-labo_atte/Pods-labo_atte.debug.xcconfig"; sourceTree = "<group>"; };
+		762A0223E466180A7AF82A89 /* Pods_labo_atte_labo_atteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_labo_atte_labo_atteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80F7B92F6C1ECC00DC8CAA84 /* Pods-labo_atteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atteTests.release.xcconfig"; path = "Target Support Files/Pods-labo_atteTests/Pods-labo_atteTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C90140AFBAE522CB48D0606 /* Pods_labo_atte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_labo_atte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF649FB6251F9BCB00A36711 /* labo_atte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labo_atte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF649FB9251F9BCB00A36711 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF649FBB251F9BCB00A36711 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +222,8 @@
 		BFB59BCF25205176008D66E6 /* CodablePassThroughTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodablePassThroughTypes.swift; sourceTree = "<group>"; };
 		BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreDecoder.swift; sourceTree = "<group>"; };
 		BFB59BD125205176008D66E6 /* ServerTimestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTimestamp.swift; sourceTree = "<group>"; };
+		BFEDE9B5252054EC00DDBD44 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		F078099504690E0EB40DD840 /* Pods-labo_atteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atteTests.debug.xcconfig"; path = "Target Support Files/Pods-labo_atteTests/Pods-labo_atteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +260,7 @@
 				BF64A03B2520485500A36711 /* FirebaseInstallations.framework in Frameworks */,
 				BF64A0682520487E00A36711 /* StoreKit.framework in Frameworks */,
 				BF64A080252049B900A36711 /* libz.tbd in Frameworks */,
+				2F502BBD41DA9B844CA9BE57 /* Pods_labo_atte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD075E209D840F7A7AAD762E /* Pods_labo_atteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,12 +276,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403A1838267957DFE7331EAF /* Pods_labo_atte_labo_atteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6AEDC41D056A63EA74B08EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DA451735FFB2CA4435EAF3F /* Pods-labo_atte.debug.xcconfig */,
+				4513C12366773741CE470EC3 /* Pods-labo_atte.release.xcconfig */,
+				444777903A2B2547033BAFCF /* Pods-labo_atte-labo_atteUITests.debug.xcconfig */,
+				56978C81962D06300CF9C0F2 /* Pods-labo_atte-labo_atteUITests.release.xcconfig */,
+				F078099504690E0EB40DD840 /* Pods-labo_atteTests.debug.xcconfig */,
+				80F7B92F6C1ECC00DC8CAA84 /* Pods-labo_atteTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BF649FAD251F9BCB00A36711 = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +305,7 @@
 				BF649FDA251F9BCE00A36711 /* labo_atteUITests */,
 				BF649FB7251F9BCB00A36711 /* Products */,
 				BF64A0212520485400A36711 /* Frameworks */,
+				A6AEDC41D056A63EA74B08EC /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -352,6 +383,7 @@
 		BF64A000252042D800A36711 /* R.swift */ = {
 			isa = PBXGroup;
 			children = (
+				BFEDE9B5252054EC00DDBD44 /* R.generated.swift */,
 			);
 			path = R.swift;
 			sourceTree = "<group>";
@@ -431,6 +463,9 @@
 				BF64A0292520485500A36711 /* leveldb-library.framework */,
 				BF64A0232520485500A36711 /* nanopb.framework */,
 				BF64A0222520485500A36711 /* PromisesObjC.framework */,
+				8C90140AFBAE522CB48D0606 /* Pods_labo_atte.framework */,
+				762A0223E466180A7AF82A89 /* Pods_labo_atte_labo_atteUITests.framework */,
+				022A4D6365417D924F775985 /* Pods_labo_atteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -538,12 +573,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF649FE0251F9BCE00A36711 /* Build configuration list for PBXNativeTarget "labo_atte" */;
 			buildPhases = (
+				833E34BBE646DA5B83AF86E8 /* [CP] Check Pods Manifest.lock */,
+				BFEDE9B02520540100DDBD44 /* R.swift */,
 				BF649FB2251F9BCB00A36711 /* Sources */,
 				BF649FB3251F9BCB00A36711 /* Frameworks */,
 				BF649FB4251F9BCB00A36711 /* Resources */,
 				BF64A0712520492D00A36711 /* GoogleInfo */,
 				BF64A09B25204BA000A36711 /* Carthage */,
 				BF64A089252049DC00A36711 /* Embed Frameworks */,
+				EF3A783D2CEF1186A2F2FE78 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -558,6 +596,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF649FE3251F9BCE00A36711 /* Build configuration list for PBXNativeTarget "labo_atteTests" */;
 			buildPhases = (
+				175DFA9ECFDEC7748C2B0B48 /* [CP] Check Pods Manifest.lock */,
 				BF649FC8251F9BCE00A36711 /* Sources */,
 				BF649FC9251F9BCE00A36711 /* Frameworks */,
 				BF649FCA251F9BCE00A36711 /* Resources */,
@@ -576,9 +615,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF649FE6251F9BCE00A36711 /* Build configuration list for PBXNativeTarget "labo_atteUITests" */;
 			buildPhases = (
+				72899394E69F8DDDF0733E1A /* [CP] Check Pods Manifest.lock */,
 				BF649FD3251F9BCE00A36711 /* Sources */,
 				BF649FD4251F9BCE00A36711 /* Frameworks */,
 				BF649FD5251F9BCE00A36711 /* Resources */,
+				9F1EFADA206D176AF7645B64 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -665,6 +706,89 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		175DFA9ECFDEC7748C2B0B48 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-labo_atteTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72899394E69F8DDDF0733E1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-labo_atte-labo_atteUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		833E34BBE646DA5B83AF86E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-labo_atte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F1EFADA206D176AF7645B64 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-labo_atte-labo_atteUITests/Pods-labo_atte-labo_atteUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-labo_atte-labo_atteUITests/Pods-labo_atte-labo_atteUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-labo_atte-labo_atteUITests/Pods-labo_atte-labo_atteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		BF64A0712520492D00A36711 /* GoogleInfo */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -700,6 +824,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+		BFEDE9B02520540100DDBD44 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		EF3A783D2CEF1186A2F2FE78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-labo_atte/Pods-labo_atte-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-labo_atte/Pods-labo_atte-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-labo_atte/Pods-labo_atte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -740,6 +901,7 @@
 				BF64A0C025204D0C00A36711 /* ExString.swift in Sources */,
 				BF64A0BC25204D0C00A36711 /* ExUIColor.swift in Sources */,
 				BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */,
+				BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */,
 				BFB59BE025205176008D66E6 /* FirestoreDecoder.swift in Sources */,
 				BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */,
 				BFB59BD625205176008D66E6 /* GeoPoint+Codable.swift in Sources */,
@@ -818,6 +980,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -836,6 +999,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -879,6 +1043,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -890,6 +1055,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -899,6 +1065,7 @@
 		};
 		BF649FE1251F9BCE00A36711 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DA451735FFB2CA4435EAF3F /* Pods-labo_atte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -923,6 +1090,7 @@
 		};
 		BF649FE2251F9BCE00A36711 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4513C12366773741CE470EC3 /* Pods-labo_atte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -947,6 +1115,7 @@
 		};
 		BF649FE4251F9BCE00A36711 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F078099504690E0EB40DD840 /* Pods-labo_atteTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -969,6 +1138,7 @@
 		};
 		BF649FE5251F9BCE00A36711 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80F7B92F6C1ECC00DC8CAA84 /* Pods-labo_atteTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -991,6 +1161,7 @@
 		};
 		BF649FE7251F9BCE00A36711 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 444777903A2B2547033BAFCF /* Pods-labo_atte-labo_atteUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1011,6 +1182,7 @@
 		};
 		BF649FE8251F9BCE00A36711 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56978C81962D06300CF9C0F2 /* Pods-labo_atte-labo_atteUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

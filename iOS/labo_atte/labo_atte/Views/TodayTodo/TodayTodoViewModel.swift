@@ -135,7 +135,7 @@ final class TodayTodoModel: TodayTodoModelProtocol {
         let todo = todos.filter({ $0.groupID == groups[index].groupID ?? ""}).first
         
         if let todo = todo {
-            return todo.isFinished
+            return todo.isAttended
         } else {
             return false
         }
@@ -153,7 +153,7 @@ final class TodayTodoModel: TodayTodoModelProtocol {
         guard var finishedTodo = todo else { return }
         guard let finishedTodoIndex = getFinishedTodoIndex(groupIndex: index) else { return }
         
-        finishedTodo.isFinished = false
+        finishedTodo.isAttended = false
         let todayFormat = getTodayFormat()
         
         let documentRef = "todo/v1/groups/" + finishedTodo.groupID + "/todo/" + finishedTodo.userID + "_" + todayFormat
@@ -165,7 +165,7 @@ final class TodayTodoModel: TodayTodoModelProtocol {
                     return
                 }
                 
-                self?.todos[finishedTodoIndex].isFinished = false
+                self?.todos[finishedTodoIndex].isAttended = false
                 self?.presenter.successUnfinishedTodo()
             }
         } catch let error {
@@ -179,7 +179,7 @@ final class TodayTodoModel: TodayTodoModelProtocol {
         guard let groupID = self.groups[index].groupID else { return }
         let todayFormat = getTodayFormat()
         let documentRef = "todo/v1/groups/" + groupID + "/todo/" + user.uid + "_" + todayFormat
-        let todo = Todo(isFinished: true, userID: user.uid, groupID: groupID)
+        let todo = Todo(isAttended: true, isTodayAttended: true, userID: user.uid, groupID: groupID)
         
         do {
             _ = try self.firestore.document(documentRef).setData(from: todo, merge: true) { [weak self] error in

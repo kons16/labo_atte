@@ -9,7 +9,8 @@
 import Firebase
 
 struct Todo: Codable {
-    var isFinished: Bool
+    var isAttended: Bool
+    var isTodayAttended: Bool
     let userID: String
     let groupID: String
     @ServerTimestamp var createdAt: Timestamp?

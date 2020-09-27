@@ -82,6 +82,18 @@
 		BFA7891E2520820E003FE6D0 /* GroupTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA789192520820E003FE6D0 /* GroupTodoViewModel.swift */; };
 		BFA7891F2520820E003FE6D0 /* GroupTodoViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7891A2520820E003FE6D0 /* GroupTodoViewPresenter.swift */; };
 		BFA7892325208250003FE6D0 /* GroupTodo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA789222520824F003FE6D0 /* GroupTodo.storyboard */; };
+		BFA7892B252082A3003FE6D0 /* UserDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78927252082A3003FE6D0 /* UserDetailViewPresenter.swift */; };
+		BFA7892C252082A3003FE6D0 /* UserDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78928252082A3003FE6D0 /* UserDetailViewModel.swift */; };
+		BFA7892D252082A3003FE6D0 /* UserDetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78929252082A3003FE6D0 /* UserDetailViewBuilder.swift */; };
+		BFA7892E252082A3003FE6D0 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7892A252082A3003FE6D0 /* UserDetailViewController.swift */; };
+		BFA78932252082AE003FE6D0 /* UserDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA78931252082AE003FE6D0 /* UserDetail.storyboard */; };
+		BFA78942252082F6003FE6D0 /* GroupRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78937252082F6003FE6D0 /* GroupRepositoryProtocol.swift */; };
+		BFA78943252082F6003FE6D0 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78938252082F6003FE6D0 /* UserRepositoryProtocol.swift */; };
+		BFA78944252082F6003FE6D0 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7893B252082F6003FE6D0 /* UserRepository.swift */; };
+		BFA78945252082F6003FE6D0 /* GroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7893C252082F6003FE6D0 /* GroupRepository.swift */; };
+		BFA78946252082F6003FE6D0 /* UserDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7893E252082F6003FE6D0 /* UserDataStore.swift */; };
+		BFA78947252082F6003FE6D0 /* GroupDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7893F252082F6003FE6D0 /* GroupDataStore.swift */; };
+		BFA78948252082F6003FE6D0 /* NavigationImageConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA78941252082F6003FE6D0 /* NavigationImageConst.swift */; };
 		BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */; };
 		BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */; };
 		BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */; };
@@ -252,6 +264,18 @@
 		BFA789192520820E003FE6D0 /* GroupTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTodoViewModel.swift; sourceTree = "<group>"; };
 		BFA7891A2520820E003FE6D0 /* GroupTodoViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTodoViewPresenter.swift; sourceTree = "<group>"; };
 		BFA789222520824F003FE6D0 /* GroupTodo.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupTodo.storyboard; sourceTree = "<group>"; };
+		BFA78927252082A3003FE6D0 /* UserDetailViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewPresenter.swift; sourceTree = "<group>"; };
+		BFA78928252082A3003FE6D0 /* UserDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewModel.swift; sourceTree = "<group>"; };
+		BFA78929252082A3003FE6D0 /* UserDetailViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewBuilder.swift; sourceTree = "<group>"; };
+		BFA7892A252082A3003FE6D0 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		BFA78931252082AE003FE6D0 /* UserDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UserDetail.storyboard; sourceTree = "<group>"; };
+		BFA78937252082F6003FE6D0 /* GroupRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BFA78938252082F6003FE6D0 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		BFA7893B252082F6003FE6D0 /* UserRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		BFA7893C252082F6003FE6D0 /* GroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupRepository.swift; sourceTree = "<group>"; };
+		BFA7893E252082F6003FE6D0 /* UserDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataStore.swift; sourceTree = "<group>"; };
+		BFA7893F252082F6003FE6D0 /* GroupDataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDataStore.swift; sourceTree = "<group>"; };
+		BFA78941252082F6003FE6D0 /* NavigationImageConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationImageConst.swift; sourceTree = "<group>"; };
 		BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewController.swift; sourceTree = "<group>"; };
 		BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewModel.swift; sourceTree = "<group>"; };
@@ -408,6 +432,8 @@
 				BFB59BC125205176008D66E6 /* FirebaseFirestoreSwift */,
 				BF64A001252042F200A36711 /* Resources */,
 				BFB59BB825205161008D66E6 /* Model */,
+				BFA78939252082F6003FE6D0 /* Data */,
+				BFA78935252082F6003FE6D0 /* Domain */,
 				BF64A0A425204C9100A36711 /* Views */,
 			);
 			path = labo_atte;
@@ -562,6 +588,7 @@
 				BFA78906252081CE003FE6D0 /* Profile */,
 				BFB59B9D25204FFB008D66E6 /* TodayTodo */,
 				BFA789152520820E003FE6D0 /* GroupTodo */,
+				BFA78926252082A3003FE6D0 /* UserDetail */,
 				BF64A0A625204CB300A36711 /* MainTabBarController */,
 				BF64A0A525204CA500A36711 /* Storyboards */,
 			);
@@ -577,6 +604,7 @@
 				BFA78911252081D7003FE6D0 /* Profile.storyboard */,
 				BFA789222520824F003FE6D0 /* GroupTodo.storyboard */,
 				BFA78902252081AC003FE6D0 /* EditProfile.storyboard */,
+				BFA78931252082AE003FE6D0 /* UserDetail.storyboard */,
 				BFDBC90525207ED100FD46AF /* CreateNewGroup.storyboard */,
 				BFDBC8D925207C7900FD46AF /* RegisterUser.storyboard */,
 				BFB59BB225205049008D66E6 /* TodayTodo.storyboard */,
@@ -648,6 +676,70 @@
 				BFA7891A2520820E003FE6D0 /* GroupTodoViewPresenter.swift */,
 			);
 			path = GroupTodo;
+			sourceTree = "<group>";
+		};
+		BFA78926252082A3003FE6D0 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BFA78927252082A3003FE6D0 /* UserDetailViewPresenter.swift */,
+				BFA78928252082A3003FE6D0 /* UserDetailViewModel.swift */,
+				BFA78929252082A3003FE6D0 /* UserDetailViewBuilder.swift */,
+				BFA7892A252082A3003FE6D0 /* UserDetailViewController.swift */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		BFA78935252082F6003FE6D0 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				BFA78936252082F6003FE6D0 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		BFA78936252082F6003FE6D0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BFA78937252082F6003FE6D0 /* GroupRepositoryProtocol.swift */,
+				BFA78938252082F6003FE6D0 /* UserRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BFA78939252082F6003FE6D0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7893A252082F6003FE6D0 /* Repository */,
+				BFA7893D252082F6003FE6D0 /* DataStore */,
+				BFA78940252082F6003FE6D0 /* AppData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		BFA7893A252082F6003FE6D0 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7893B252082F6003FE6D0 /* UserRepository.swift */,
+				BFA7893C252082F6003FE6D0 /* GroupRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		BFA7893D252082F6003FE6D0 /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7893E252082F6003FE6D0 /* UserDataStore.swift */,
+				BFA7893F252082F6003FE6D0 /* GroupDataStore.swift */,
+			);
+			path = DataStore;
+			sourceTree = "<group>";
+		};
+		BFA78940252082F6003FE6D0 /* AppData */ = {
+			isa = PBXGroup;
+			children = (
+				BFA78941252082F6003FE6D0 /* NavigationImageConst.swift */,
+			);
+			path = AppData;
 			sourceTree = "<group>";
 		};
 		BFB59B9D25204FFB008D66E6 /* TodayTodo */ = {
@@ -855,6 +947,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA78932252082AE003FE6D0 /* UserDetail.storyboard in Resources */,
 				BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */,
 				BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */,
 				BF64A0172520450C00A36711 /* Podfile in Resources */,
@@ -1072,6 +1165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA78943252082F6003FE6D0 /* UserRepositoryProtocol.swift in Sources */,
 				BFB59BBD25205161008D66E6 /* Group.swift in Sources */,
 				BFB59BD525205176008D66E6 /* CodableErrors.swift in Sources */,
 				BFDBC8D625207C4500FD46AF /* RegisterUserViewPresenter.swift in Sources */,
@@ -1097,10 +1191,13 @@
 				BFB59BDB25205176008D66E6 /* DocumentSnapshot+ReadDecodable.swift in Sources */,
 				BFDBC8D425207C4500FD46AF /* RegisterUserViewBuilder.swift in Sources */,
 				BFB59BD225205176008D66E6 /* DocumentReference+Codable.swift in Sources */,
+				BFA78944252082F6003FE6D0 /* UserRepository.swift in Sources */,
 				BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */,
 				BF64A0AB25204CCE00A36711 /* MainTabBarViewModel.swift in Sources */,
 				BFB59BBC25205161008D66E6 /* User.swift in Sources */,
 				BFDBC8E425207DB600FD46AF /* SelectedUsersAndMeCollectionViewCell.swift in Sources */,
+				BFA78945252082F6003FE6D0 /* GroupRepository.swift in Sources */,
+				BFA7892B252082A3003FE6D0 /* UserDetailViewPresenter.swift in Sources */,
 				BFDBC8FC25207E8D00FD46AF /* SearchUserTableviewCell.swift in Sources */,
 				BFB59BD925205176008D66E6 /* DocumentReference+WriteEncodable.swift in Sources */,
 				BFB59BD725205176008D66E6 /* Transaction+WriteEncodable.swift in Sources */,
@@ -1109,10 +1206,12 @@
 				BFA7891D2520820E003FE6D0 /* GroupTableViewCell.swift in Sources */,
 				BFA7891B2520820E003FE6D0 /* GroupTodoViewController.swift in Sources */,
 				BFA7890D252081CE003FE6D0 /* ProfileViewPresenter.swift in Sources */,
+				BFA7892D252082A3003FE6D0 /* UserDetailViewBuilder.swift in Sources */,
 				BFB59BDC25205176008D66E6 /* DocumentID.swift in Sources */,
 				BFB59BDF25205176008D66E6 /* CodablePassThroughTypes.swift in Sources */,
 				BFB59BA725205006008D66E6 /* TodayTodoViewPresenter.swift in Sources */,
 				BFDBC90025207E8D00FD46AF /* CreateNewGroupViewPresenter.swift in Sources */,
+				BFA78942252082F6003FE6D0 /* GroupRepositoryProtocol.swift in Sources */,
 				BFDBC8C425207B4800FD46AF /* EditGroupViewController.swift in Sources */,
 				BFDBC8FF25207E8D00FD46AF /* CreateNewGroupViewController.swift in Sources */,
 				BFB59BBE25205161008D66E6 /* Todo.swift in Sources */,
@@ -1125,6 +1224,8 @@
 				BFDBC8FD25207E8D00FD46AF /* CreateNewGroupViewModel.swift in Sources */,
 				BF649FBC251F9BCB00A36711 /* SceneDelegate.swift in Sources */,
 				BF64A0BF25204D0C00A36711 /* ExCollectionView.swift in Sources */,
+				BFA78947252082F6003FE6D0 /* GroupDataStore.swift in Sources */,
+				BFA7892C252082A3003FE6D0 /* UserDetailViewModel.swift in Sources */,
 				BFA788FF25208194003FE6D0 /* EditProfileViewModel.swift in Sources */,
 				BF64A0BB25204D0C00A36711 /* ExUIView.swift in Sources */,
 				BF64A0AD25204CCE00A36711 /* MainTabBarViewBuilder.swift in Sources */,
@@ -1133,6 +1234,7 @@
 				BF64A0BC25204D0C00A36711 /* ExUIColor.swift in Sources */,
 				BFA788FC25208194003FE6D0 /* EditProfileViewPresenter.swift in Sources */,
 				BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */,
+				BFA78946252082F6003FE6D0 /* UserDataStore.swift in Sources */,
 				BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */,
 				BFDBC8FE25207E8D00FD46AF /* CreateNewGroupViewBuilder.swift in Sources */,
 				BFDBC8C325207B4800FD46AF /* EditGroupViewModel.swift in Sources */,
@@ -1140,9 +1242,11 @@
 				BFDBC8D525207C4500FD46AF /* RegisterUserViewModel.swift in Sources */,
 				BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */,
 				BFB59BD625205176008D66E6 /* GeoPoint+Codable.swift in Sources */,
+				BFA7892E252082A3003FE6D0 /* UserDetailViewController.swift in Sources */,
 				BFB59BDA25205176008D66E6 /* FirestoreEncoder.swift in Sources */,
 				BFB59BD825205176008D66E6 /* CollectionReference+WriteEncodable.swift in Sources */,
 				BF64A0BA25204D0C00A36711 /* ExUIImageView.swift in Sources */,
+				BFA78948252082F6003FE6D0 /* NavigationImageConst.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

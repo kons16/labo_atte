@@ -39,12 +39,18 @@ class SignUp extends Component<SignUpProps, SignUpState> {
                     name: values.name,
                     profileImageURL: null
                 })
+
+                firebase.auth().currentUser?.updateProfile({
+                    displayName: values.name
+                })
+                
                 this.props.history.push("/");
             })
             .catch(error => { //異常終了時
                 if (this._isMounted) this.setState({ loading: false });
                 alert(error);
             });
+        
     }
 
     componentDidMount = () => {

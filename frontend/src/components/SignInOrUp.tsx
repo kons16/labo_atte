@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormFeedback, Spinner } from 'reactstrap';
-import { Link, RouteComponentProps } from 'react-router-dom'
+import { Link, RouteComponentProps } from 'react-router-dom';
 import * as H from 'history';
 import { Formik } from 'formik';
 import * as Yup from 'yup';

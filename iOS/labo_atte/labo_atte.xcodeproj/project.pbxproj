@@ -91,6 +91,11 @@
 		BFB59BDF25205176008D66E6 /* CodablePassThroughTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BCF25205176008D66E6 /* CodablePassThroughTypes.swift */; };
 		BFB59BE025205176008D66E6 /* FirestoreDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */; };
 		BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD125205176008D66E6 /* ServerTimestamp.swift */; };
+		BFDBC8C225207B4800FD46AF /* EditGroupViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8BE25207B4800FD46AF /* EditGroupViewBuilder.swift */; };
+		BFDBC8C325207B4800FD46AF /* EditGroupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8BF25207B4800FD46AF /* EditGroupViewModel.swift */; };
+		BFDBC8C425207B4800FD46AF /* EditGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8C025207B4800FD46AF /* EditGroupViewController.swift */; };
+		BFDBC8C525207B4800FD46AF /* EditGroupViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDBC8C125207B4800FD46AF /* EditGroupViewPresenter.swift */; };
+		BFDBC8C925207B5700FD46AF /* EditGroup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFDBC8C825207B5700FD46AF /* EditGroup.storyboard */; };
 		BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDE9B5252054EC00DDBD44 /* R.generated.swift */; };
 		BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFEDE9D4252058D600DDBD44 /* .gitignore */; };
 		BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BFF2D36F2520610F00EF87AE /* .swiftlint.yml */; };
@@ -222,6 +227,11 @@
 		BFB59BCF25205176008D66E6 /* CodablePassThroughTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodablePassThroughTypes.swift; sourceTree = "<group>"; };
 		BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreDecoder.swift; sourceTree = "<group>"; };
 		BFB59BD125205176008D66E6 /* ServerTimestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTimestamp.swift; sourceTree = "<group>"; };
+		BFDBC8BE25207B4800FD46AF /* EditGroupViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGroupViewBuilder.swift; sourceTree = "<group>"; };
+		BFDBC8BF25207B4800FD46AF /* EditGroupViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGroupViewModel.swift; sourceTree = "<group>"; };
+		BFDBC8C025207B4800FD46AF /* EditGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGroupViewController.swift; sourceTree = "<group>"; };
+		BFDBC8C125207B4800FD46AF /* EditGroupViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditGroupViewPresenter.swift; sourceTree = "<group>"; };
+		BFDBC8C825207B5700FD46AF /* EditGroup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EditGroup.storyboard; sourceTree = "<group>"; };
 		BFEDE9B5252054EC00DDBD44 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFEDE9D4252058D600DDBD44 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BFF2D36F2520610F00EF87AE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -476,6 +486,7 @@
 		BF64A0A425204C9100A36711 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFDBC8BD25207B4800FD46AF /* EditGroup */,
 				BFB59B9D25204FFB008D66E6 /* TodayTodo */,
 				BF64A0A625204CB300A36711 /* MainTabBarController */,
 				BF64A0A525204CA500A36711 /* Storyboards */,
@@ -486,6 +497,7 @@
 		BF64A0A525204CA500A36711 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				BFDBC8C825207B5700FD46AF /* EditGroup.storyboard */,
 				BF64A0C325204D3300A36711 /* MainTabBar.storyboard */,
 				BFB59BB225205049008D66E6 /* TodayTodo.storyboard */,
 			);
@@ -567,6 +579,17 @@
 				BFB59BD125205176008D66E6 /* ServerTimestamp.swift */,
 			);
 			path = FirebaseFirestoreSwift;
+			sourceTree = "<group>";
+		};
+		BFDBC8BD25207B4800FD46AF /* EditGroup */ = {
+			isa = PBXGroup;
+			children = (
+				BFDBC8BE25207B4800FD46AF /* EditGroupViewBuilder.swift */,
+				BFDBC8C025207B4800FD46AF /* EditGroupViewController.swift */,
+				BFDBC8C125207B4800FD46AF /* EditGroupViewPresenter.swift */,
+				BFDBC8BF25207B4800FD46AF /* EditGroupViewModel.swift */,
+			);
+			path = EditGroup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -686,6 +709,7 @@
 				BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */,
 				BF64A0172520450C00A36711 /* Podfile in Resources */,
 				BFB59BB325205049008D66E6 /* TodayTodo.storyboard in Resources */,
+				BFDBC8C925207B5700FD46AF /* EditGroup.storyboard in Resources */,
 				BF64A01D2520455D00A36711 /* carthage.sh in Resources */,
 				BF64A0C425204D3300A36711 /* MainTabBar.storyboard in Resources */,
 				BF64A0182520450C00A36711 /* Cartfile in Resources */,
@@ -894,12 +918,14 @@
 			files = (
 				BFB59BBD25205161008D66E6 /* Group.swift in Sources */,
 				BFB59BD525205176008D66E6 /* CodableErrors.swift in Sources */,
+				BFDBC8C225207B4800FD46AF /* EditGroupViewBuilder.swift in Sources */,
 				BF64A0AC25204CCE00A36711 /* MainTabBarViewController.swift in Sources */,
 				BF64A0AE25204CCE00A36711 /* MainTabBarViewPresenter.swift in Sources */,
 				BFB59BDD25205176008D66E6 /* WriteBatch+WriteEncodable.swift in Sources */,
 				BFB59BA625205006008D66E6 /* TodayTodoViewbuilder.swift in Sources */,
 				BF649FBA251F9BCB00A36711 /* AppDelegate.swift in Sources */,
 				BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */,
+				BFDBC8C525207B4800FD46AF /* EditGroupViewPresenter.swift in Sources */,
 				BF64A0BD25204D0C00A36711 /* ExUIViewController.swift in Sources */,
 				BFB59BDE25205176008D66E6 /* FieldValue+Encodable.swift in Sources */,
 				BFB59BDB25205176008D66E6 /* DocumentSnapshot+ReadDecodable.swift in Sources */,
@@ -913,6 +939,7 @@
 				BFB59BDC25205176008D66E6 /* DocumentID.swift in Sources */,
 				BFB59BDF25205176008D66E6 /* CodablePassThroughTypes.swift in Sources */,
 				BFB59BA725205006008D66E6 /* TodayTodoViewPresenter.swift in Sources */,
+				BFDBC8C425207B4800FD46AF /* EditGroupViewController.swift in Sources */,
 				BFB59BBE25205161008D66E6 /* Todo.swift in Sources */,
 				BF64A0A125204C7400A36711 /* Routes.swift in Sources */,
 				BFB59BD425205176008D66E6 /* ExplicitNull.swift in Sources */,
@@ -925,6 +952,7 @@
 				BF64A0BC25204D0C00A36711 /* ExUIColor.swift in Sources */,
 				BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */,
 				BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */,
+				BFDBC8C325207B4800FD46AF /* EditGroupViewModel.swift in Sources */,
 				BFB59BE025205176008D66E6 /* FirestoreDecoder.swift in Sources */,
 				BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */,
 				BFB59BD625205176008D66E6 /* GeoPoint+Codable.swift in Sources */,

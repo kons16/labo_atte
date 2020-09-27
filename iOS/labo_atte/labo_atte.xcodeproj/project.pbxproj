@@ -105,6 +105,8 @@
 		BFA7895E25208335003FE6D0 /* GroupDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7895425208335003FE6D0 /* GroupDetailViewPresenter.swift */; };
 		BFA7895F25208335003FE6D0 /* GroupDetailCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFA7895525208335003FE6D0 /* GroupDetailCollectionReusableView.xib */; };
 		BFA7896325208340003FE6D0 /* GroupDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA7896225208340003FE6D0 /* GroupDetail.storyboard */; };
+		BFA78967252083A0003FE6D0 /* CropViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA78966252083A0003FE6D0 /* CropViewController.framework */; };
+		BFA78968252083A1003FE6D0 /* CropViewController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BFA78966252083A0003FE6D0 /* CropViewController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */; };
 		BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */; };
 		BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */; };
@@ -183,6 +185,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				BF64A097252049F100A36711 /* SCLAlertView.framework in Embed Frameworks */,
+				BFA78968252083A1003FE6D0 /* CropViewController.framework in Embed Frameworks */,
 				BF64A095252049F100A36711 /* TOCropViewController.framework in Embed Frameworks */,
 				BF64A093252049F000A36711 /* Nuke.framework in Embed Frameworks */,
 				BF64A088252049DB00A36711 /* DZNEmptyDataSet.framework in Embed Frameworks */,
@@ -298,6 +301,7 @@
 		BFA7895425208335003FE6D0 /* GroupDetailViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupDetailViewPresenter.swift; sourceTree = "<group>"; };
 		BFA7895525208335003FE6D0 /* GroupDetailCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupDetailCollectionReusableView.xib; sourceTree = "<group>"; };
 		BFA7896225208340003FE6D0 /* GroupDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupDetail.storyboard; sourceTree = "<group>"; };
+		BFA78966252083A0003FE6D0 /* CropViewController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CropViewController.framework; path = Carthage/Build/iOS/CropViewController.framework; sourceTree = "<group>"; };
 		BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewController.swift; sourceTree = "<group>"; };
 		BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewModel.swift; sourceTree = "<group>"; };
@@ -370,6 +374,7 @@
 				BF64A092252049F000A36711 /* Nuke.framework in Frameworks */,
 				BF64A0492520485600A36711 /* FirebaseStorage.framework in Frameworks */,
 				BF64A0412520485600A36711 /* gRPC-C++.framework in Frameworks */,
+				BFA78967252083A0003FE6D0 /* CropViewController.framework in Frameworks */,
 				BF64A03F2520485500A36711 /* FirebaseCoreDiagnostics.framework in Frameworks */,
 				BF64A0432520485600A36711 /* BoringSSL-GRPC.framework in Frameworks */,
 				BF64A0572520485800A36711 /* FirebaseCore.framework in Frameworks */,
@@ -563,6 +568,7 @@
 		BF64A0212520485400A36711 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFA78966252083A0003FE6D0 /* CropViewController.framework */,
 				BF64A08C252049F000A36711 /* FSCalendar.framework */,
 				BF64A08D252049F000A36711 /* Nuke.framework */,
 				BF64A08F252049F000A36711 /* SCLAlertView.framework */,

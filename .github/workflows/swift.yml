@@ -1,0 +1,57 @@
+name: Swift
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Select Xcode
+      run: sudo xcode-select -s '/Applications/Xcode_11.5.app/Contents/Developer'
+    - name: Cache Carthage file
+      uses: actions/cache@v1
+      with:
+        path: Carthage
+        key: ${{ runner.os }}-carthage-${{ hashFiles('**/Cartfile.resolved') }}
+        restore-keys: |
+          ${{ runner.os }}-carthage-
+    - name: Cache CocoaPods files
+      uses: actions/cache@v1
+      with:
+        path: Pods
+        key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-pods-
+
+
+    - name: Carthage
+      run: carthage bootstrap --platform iOS --cache-builds
+    - name: CocoaPods
+      run: pod install
+
+    # Run build
+    - name: Build
+      run: xcodebuild
+            -workspace labo_atte.xcworkspace
+            -scheme labo_atte
+            -sdk iphonesimulator
+            -configuration Debug
+            build
+      # Run unit test
+    - name: Run tests
+      run: xcodebuild
+            -scheme labo_atte
+            -workspace labo_atte.xcworkspace
+            -sdk iphonesimulator
+            -configuration Debug
+            -destination 'platform=iOS Simulator,name=iPhone 11 Pro Max'
+            clean test
+
+

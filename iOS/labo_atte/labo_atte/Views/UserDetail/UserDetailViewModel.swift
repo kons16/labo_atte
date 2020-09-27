@@ -89,9 +89,9 @@ final class UserDetailModel: UserDetailModelProtocol {
     }
     
     func getTodoListAsFinishedDate() -> [String] {
-        return self.todos.filter { $0.isFinished }.reduce([String]()) { list, todo in
+        return self.todos.filter { $0.isTodayAttended }.reduce([String]()) { list, todo in
             var list = list
-            guard todo.isFinished else { return list }
+            guard todo.isTodayAttended else { return list }
             guard let createdAt = todo.createdAt?.dateValue() else { return list }
             list.append(dateFormatter.string(from: createdAt))
             return list

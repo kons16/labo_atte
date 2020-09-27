@@ -63,6 +63,8 @@ final class GroupTodoModel: GroupTodoModelProtocol {
                 return try? queryDocumentSnapshot.data(as: Group.self)
             }
             
+            print(self.group)
+            
             self.presenter.successFetchGroup()
         }
     }

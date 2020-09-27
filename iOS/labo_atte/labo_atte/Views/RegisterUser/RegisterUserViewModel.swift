@@ -43,7 +43,7 @@ final class RegisterUserModel: RegisterUserModelProtocol {
     }
     
     func registerUserFirebase(uid: String, name: String) {
-        let user = User(id: uid, name: name, profileImageURL: nil)
+        let user = User(id: uid, name: name, profileImageURL: nil, fcmToken: nil)
         
         do {
             _ = try self.firestore.collection("todo/v1/users").document(uid).setData(from: user) { error in

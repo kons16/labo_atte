@@ -42,13 +42,20 @@ class SearchUserTableviewCell: UITableViewCell {
     
     func configure(with user: User, isSelected: Bool) {
         self.userNameLabel.text = user.name
-            
-        DispatchQueue.main.async {
-            let options = ImageLoadingOptions(placeholder: R.image.placeholderImage(), transition: .fadeIn(duration: 0.25), failureImage: R.image.defaultProfileImage())
-            loadImage(with: URL(string: user.profileImageURL ?? "")!, options: options, into: self.profileImageView, progress: nil, completion: nil)
-        }
-        
         radioImageView.image = isSelected ? UIImage(systemName: "checkmark.seal.fill") : UIImage(systemName: "checkmark.seal")
         radioImageView.tintColor = isSelected ? .systemGreen : .systemGray
+        
+        
+        guard let url = URL(string: user.profileImageURL ?? "") else {
+            self.profileImageView.image = R.image.defaultProfileImage()
+            return
+        }
+        
+        DispatchQueue.main.async {
+            let options = ImageLoadingOptions(placeholder: R.image.placeholderImage(), transition: .fadeIn(duration: 0.25), failureImage: R.image.defaultProfileImage())
+            loadImage(with: url, options: options, into: self.profileImageView, progress: nil, completion: nil)
+        }
+        
+        
     }
 }

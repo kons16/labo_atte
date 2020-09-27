@@ -176,17 +176,8 @@ extension UserDetailViewController: FSCalendarDelegate, FSCalendarDataSource {
     }
     
     func minimumDate(for calendar: FSCalendar) -> Date {
-        //TODO:- 以下はグループ作成日にすること
-        let list = self.presenter.todoList.filter { $0.isFinished }.reduce([Date]()) { list, todo in
-            var list = list
-            guard todo.isFinished else { return list }
-            guard let createdAt = todo.createdAt?.dateValue() else { return list }
-            list.append(createdAt)
-            return list
-        }.sorted()
-        
-        guard let first = list.first else { return Date(timeIntervalSinceNow: -60 * 60 * 24 * 30) }
-        return first
+        guard let groupCreatedDate = self.presenter.group.createdAt?.dateValue() else { return Date(timeIntervalSinceNow: -60 * 60 * 24 * 30) }
+        return groupCreatedDate
     }
     
     func calendar(_ calendar: FSCalendar, imageFor date: Date) -> UIImage? {

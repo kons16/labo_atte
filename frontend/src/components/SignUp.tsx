@@ -31,6 +31,8 @@ class SignUp extends Component<SignUpProps, SignUpState> {
             .then(res => {  //正常終了時
                 //spinner表示終了
                 if (this._isMounted) this.setState({ loading: false });
+                // firestore に user を保存
+                
                 this.props.history.push("/");
             })
             .catch(error => { //異常終了時

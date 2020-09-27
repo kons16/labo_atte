@@ -13,6 +13,9 @@
 		BF649FD1251F9BCE00A36711 /* labo_atteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FD0251F9BCE00A36711 /* labo_atteTests.swift */; };
 		BF649FDC251F9BCE00A36711 /* labo_atteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FDB251F9BCE00A36711 /* labo_atteUITests.swift */; };
 		BF649FFA2520428C00A36711 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BF649FF92520428C00A36711 /* .gitignore */; };
+		BF64A0172520450C00A36711 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BF64A0152520450C00A36711 /* Podfile */; };
+		BF64A0182520450C00A36711 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = BF64A0162520450C00A36711 /* Cartfile */; };
+		BF64A01D2520455D00A36711 /* carthage.sh in Resources */ = {isa = PBXBuildFile; fileRef = BF64A01C2520455D00A36711 /* carthage.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		BF649FDB251F9BCE00A36711 /* labo_atteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = labo_atteUITests.swift; sourceTree = "<group>"; };
 		BF649FDD251F9BCE00A36711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF649FF92520428C00A36711 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BF64A0152520450C00A36711 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		BF64A0162520450C00A36711 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
+		BF64A01C2520455D00A36711 /* carthage.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,9 @@
 		BF649FF82520427B00A36711 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				BF64A01C2520455D00A36711 /* carthage.sh */,
+				BF64A0162520450C00A36711 /* Cartfile */,
+				BF64A0152520450C00A36711 /* Podfile */,
 				BF649FF92520428C00A36711 /* .gitignore */,
 			);
 			name = Environment;
@@ -297,7 +306,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF64A0172520450C00A36711 /* Podfile in Resources */,
 				BF649FFA2520428C00A36711 /* .gitignore in Resources */,
+				BF64A01D2520455D00A36711 /* carthage.sh in Resources */,
+				BF64A0182520450C00A36711 /* Cartfile in Resources */,
 				BF649FC3251F9BCD00A36711 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

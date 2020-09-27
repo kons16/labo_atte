@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qkY-0x-fZ4">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Today Todo View Controller-->
+        <scene sceneID="GvB-kM-FYg">
+            <objects>
+                <viewController id="qkY-0x-fZ4" customClass="TodayTodoViewController" customModule="labo_atte" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tg8-Ls-Xl6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SIM-as-ySw">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="2" minimumInteritemSpacing="2" id="WyB-Tc-JDd">
+                                    <size key="itemSize" width="398" height="95"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TodayTodoCollectionViewCell" id="Y4d-9a-7Jk" customClass="TodayTodoCollectionViewCell" customModule="labo_atte" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="398" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mgw-D7-RYP">
+                                            <rect key="frame" x="0.0" y="0.0" width="398" height="95"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBo-mg-J4c">
+                                                    <rect key="frame" x="8" y="22.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="dyf-hY-6I1"/>
+                                                        <constraint firstAttribute="height" constant="50" id="f4w-fn-cIf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    <state key="normal" image="checkmark.circle" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="33" scale="large" weight="semibold"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="tapRadioButton:" destination="Y4d-9a-7Jk" eventType="touchUpInside" id="8S1-Rm-XII"/>
+                                                    </connections>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p4k-YR-jRL">
+                                                    <rect key="frame" x="66" y="22.5" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="SEa-Ip-010"/>
+                                                        <constraint firstAttribute="width" constant="50" id="V1C-lo-wCD"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TvR-ab-4Xk">
+                                                    <rect key="frame" x="124" y="24.5" width="266" height="46.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7By-Nk-JDs">
+                                                            <rect key="frame" x="0.0" y="0.0" width="266" height="24"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="24" id="zQS-dw-Aeg"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqI-3S-kBg">
+                                                            <rect key="frame" x="0.0" y="32" width="266" height="14.5"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="7By-Nk-JDs" secondAttribute="trailing" id="7Zi-zC-bjx"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mqI-3S-kBg" secondAttribute="trailing" id="CSb-Gc-52b"/>
+                                                        <constraint firstItem="mqI-3S-kBg" firstAttribute="top" secondItem="7By-Nk-JDs" secondAttribute="bottom" constant="8" symbolic="YES" id="FWG-PN-9Jq"/>
+                                                        <constraint firstItem="7By-Nk-JDs" firstAttribute="top" secondItem="TvR-ab-4Xk" secondAttribute="top" id="PkS-aV-hhz"/>
+                                                        <constraint firstItem="mqI-3S-kBg" firstAttribute="leading" secondItem="TvR-ab-4Xk" secondAttribute="leading" id="Sp5-En-B62"/>
+                                                        <constraint firstItem="7By-Nk-JDs" firstAttribute="leading" secondItem="TvR-ab-4Xk" secondAttribute="leading" id="g4H-ml-fXp"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mqI-3S-kBg" secondAttribute="bottom" id="gzk-C0-esM"/>
+                                                        <constraint firstAttribute="height" constant="46.5" id="xh8-ok-3mH"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="p4k-YR-jRL" firstAttribute="leading" secondItem="uBo-mg-J4c" secondAttribute="trailing" constant="8" id="1XQ-L9-XcH"/>
+                                                <constraint firstItem="TvR-ab-4Xk" firstAttribute="leading" secondItem="p4k-YR-jRL" secondAttribute="trailing" constant="8" symbolic="YES" id="6zi-Rg-QgO"/>
+                                                <constraint firstItem="TvR-ab-4Xk" firstAttribute="centerY" secondItem="mgw-D7-RYP" secondAttribute="centerY" id="ATO-sF-ArC"/>
+                                                <constraint firstAttribute="trailing" secondItem="TvR-ab-4Xk" secondAttribute="trailing" constant="8" id="P7U-qG-esa"/>
+                                                <constraint firstItem="p4k-YR-jRL" firstAttribute="centerY" secondItem="mgw-D7-RYP" secondAttribute="centerY" id="jio-pg-dgP"/>
+                                                <constraint firstItem="uBo-mg-J4c" firstAttribute="leading" secondItem="mgw-D7-RYP" secondAttribute="leading" constant="8" id="p2T-aR-vrb"/>
+                                                <constraint firstItem="uBo-mg-J4c" firstAttribute="centerY" secondItem="mgw-D7-RYP" secondAttribute="centerY" id="rdE-iz-bWk"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="398" height="95"/>
+                                        <connections>
+                                            <outlet property="groupImageView" destination="p4k-YR-jRL" id="BFb-8t-tgi"/>
+                                            <outlet property="groupNameLabel" destination="mqI-3S-kBg" id="k93-a4-iSf"/>
+                                            <outlet property="radioButton" destination="uBo-mg-J4c" id="dZS-j9-qff"/>
+                                            <outlet property="taskLabel" destination="7By-Nk-JDs" id="Qn1-aZ-Moa"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jDu-HG-zeq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SIM-as-ySw" firstAttribute="bottom" secondItem="tg8-Ls-Xl6" secondAttribute="bottom" id="07A-As-chm"/>
+                            <constraint firstItem="SIM-as-ySw" firstAttribute="leading" secondItem="jDu-HG-zeq" secondAttribute="leading" id="I5I-RC-T9C"/>
+                            <constraint firstItem="SIM-as-ySw" firstAttribute="top" secondItem="tg8-Ls-Xl6" secondAttribute="top" id="h3b-mX-o0x"/>
+                            <constraint firstItem="SIM-as-ySw" firstAttribute="trailing" secondItem="jDu-HG-zeq" secondAttribute="trailing" id="ysU-T5-F19"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="todayTodoCollectionView" destination="SIM-as-ySw" id="i5z-V3-Tge"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgC-iM-l8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

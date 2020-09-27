@@ -32,13 +32,20 @@ jobs:
 
 
     - name: Carthage
-      run: carthage bootstrap --platform iOS --cache-builds
+      run: |
+        cd iOS/labo_atte/
+        carthage bootstrap --platform iOS --cache-builds
     - name: CocoaPods
-      run: pod install
+      run: |
+        cd iOS/labo_atte/
+        pod install
 
     # Run build
     - name: Build
-      run: xcodebuild
+      run: |
+        cd iOS/labo_atte/ 
+        xcodebuild
+            -allowProvisioningUpdates
             -workspace labo_atte.xcworkspace
             -scheme labo_atte
             -sdk iphonesimulator
@@ -46,7 +53,10 @@ jobs:
             build
       # Run unit test
     - name: Run tests
-      run: xcodebuild
+      run: |
+        cd iOS/labo_atte/
+        xcodebuild
+            -allowProvisioningUpdates
             -scheme labo_atte
             -workspace labo_atte.xcworkspace
             -sdk iphonesimulator

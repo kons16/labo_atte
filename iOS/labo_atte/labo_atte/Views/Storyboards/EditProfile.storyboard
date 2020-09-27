@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLm-mX-A78">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile View Controller-->
+        <scene sceneID="JhR-xr-laY">
+            <objects>
+                <viewController id="uLm-mX-A78" customClass="EditProfileViewController" customModule="ShareTodo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xXJ-ua-TLa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3g-W3-agu">
+                                <rect key="frame" x="50" y="224" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Amx-Vn-8N0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="tapChangeProfileButton:" destination="uLm-mX-A78" eventType="touchUpInside" id="LwC-ec-7n6"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3q4-kl-WJY">
+                                <rect key="frame" x="144.5" y="74" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="3eR-mu-uV3"/>
+                                    <constraint firstAttribute="height" constant="125" id="Ykh-HH-z9l"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Crs-cm-Yz7">
+                                <rect key="frame" x="50" y="304" width="314" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3q4-kl-WJY" firstAttribute="centerX" secondItem="xXJ-ua-TLa" secondAttribute="centerX" id="42y-sp-G7x"/>
+                            <constraint firstItem="Crs-cm-Yz7" firstAttribute="leading" secondItem="bJL-Sq-3bb" secondAttribute="leading" constant="50" id="73f-Zc-sC2"/>
+                            <constraint firstItem="s3g-W3-agu" firstAttribute="centerX" secondItem="xXJ-ua-TLa" secondAttribute="centerX" id="8sf-tq-JJF"/>
+                            <constraint firstItem="3q4-kl-WJY" firstAttribute="top" secondItem="bJL-Sq-3bb" secondAttribute="top" constant="30" id="AxY-lc-Hg6"/>
+                            <constraint firstItem="s3g-W3-agu" firstAttribute="top" secondItem="3q4-kl-WJY" secondAttribute="bottom" constant="25" id="DCp-NH-F4e"/>
+                            <constraint firstItem="s3g-W3-agu" firstAttribute="leading" secondItem="bJL-Sq-3bb" secondAttribute="leading" constant="50" id="DOW-bt-vT9"/>
+                            <constraint firstItem="bJL-Sq-3bb" firstAttribute="trailing" secondItem="Crs-cm-Yz7" secondAttribute="trailing" constant="50" id="T01-RZ-zli"/>
+                            <constraint firstItem="bJL-Sq-3bb" firstAttribute="trailing" secondItem="s3g-W3-agu" secondAttribute="trailing" constant="50" id="lpF-Eg-ak7"/>
+                            <constraint firstItem="Crs-cm-Yz7" firstAttribute="top" secondItem="s3g-W3-agu" secondAttribute="bottom" constant="50" id="rVf-mA-QNx"/>
+                            <constraint firstItem="Crs-cm-Yz7" firstAttribute="centerX" secondItem="xXJ-ua-TLa" secondAttribute="centerX" id="uIm-xH-FRt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bJL-Sq-3bb"/>
+                    </view>
+                    <connections>
+                        <outlet property="chageProfileButton" destination="s3g-W3-agu" id="jRV-aO-o0u"/>
+                        <outlet property="nameTextField" destination="Crs-cm-Yz7" id="NrH-9P-gmL"/>
+                        <outlet property="profileImageView" destination="3q4-kl-WJY" id="6sk-wx-Xkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TOv-Aa-WlM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

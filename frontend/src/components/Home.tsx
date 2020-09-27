@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import { Link } from 'react-router-dom';
 import { Button } from 'reactstrap';
 
 interface HomeState {
     name?: string | null | undefined,
     groupName?: string,
-    isLoaded: boolean
+    groupID?: string
+    isLoaded: boolean,
 }
 
 // Home
@@ -14,6 +14,7 @@ class Home extends Component<{}, HomeState> {
     state: HomeState = {
         name: "",
         groupName: "",
+        groupID: "",
         isLoaded: false
     };
 
@@ -25,18 +26,19 @@ class Home extends Component<{}, HomeState> {
 
         const myGroups = groupRef.where("members", "array-contains", user?.uid);
         let groupName = "";
-        let myName: string = "";
+        let groupID = "";
 
         myGroups.get().then(function(docs) {
             docs.forEach(function(doc) {
                 groupName = doc.data()["name"]
+                groupID = doc.id
             });
         })
         .then(v => {
-            console.log(user);
             this.setState({
                 name: user?.displayName,
                 groupName: groupName,
+                groupID: groupID,
                 isLoaded: true
             });
         });;
@@ -46,13 +48,32 @@ class Home extends Component<{}, HomeState> {
         firebase.auth().signOut();
     }
 
+    handleAttend = () => {
+        const db = firebase.firestore();
+        const path = "todo/v1/groups/" + this.state.groupID + "/todo"
+        const groupRef = db.collection(path)
+        const user = firebase.auth().currentUser;
+
+        const today = new Date();
+        const year = today.getFullYear();
+        const month =  ("0"+(today.getMonth() + 1)).slice(-2)
+        const day = ("0"+today.getDate()).slice(-2)
+
+        const id = user?.uid + "_" + year.toString() + "_" + month.toString() + "_" + day.toString()
+
+        groupRef.doc(id).set({
+            createdAt: today,
+            groupID: this.state.groupID,
+            isAttended: true,
+            isTodayAttended: true,
+            userID: user?.uid
+        }, { merge: true } )
+    }
+
     render() {
         return (
             <div className="container">
                 <p>Home</p>
-                <Link to="/profile">Profileへ</Link>
-                <br/>
-
                 {(() => {
                     if (this.state.isLoaded) {
                         return (
@@ -62,6 +83,7 @@ class Home extends Component<{}, HomeState> {
                 })()}
 
                 <br/>
+                <Button color="primary" onClick={this.handleAttend}>出席</Button>
                 <Button onClick={this.handleLogout}>ログアウト</Button>
                 <br/>
                 <br/>

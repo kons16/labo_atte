@@ -12,7 +12,7 @@
         <!--User Detail View Controller-->
         <scene sceneID="zZY-qu-yJa">
             <objects>
-                <viewController id="A52-EZ-iv1" customClass="UserDetailViewController" customModule="ShareTodo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="A52-EZ-iv1" customClass="UserDetailViewController" customModule="labo_atte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vcb-bW-Aaf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jlt-Ad-vVy">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="724"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="674"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X6m-eo-fYl">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
@@ -96,42 +96,11 @@
                                                     <constraint firstAttribute="trailing" secondItem="0t1-Ak-KaL" secondAttribute="trailing" constant="8" id="zRj-Si-L9b"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E02-D3-RAc">
-                                                <rect key="frame" x="0.0" y="574" width="414" height="150"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1週間より過去のタスクを確認したい方に" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YP0-5q-OKa">
-                                                        <rect key="frame" x="8" y="16" width="398" height="21"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="21" id="F1r-ev-ata"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SfA-1g-skh">
-                                                        <rect key="frame" x="92" y="53" width="230" height="50"/>
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="50" id="DWC-Fp-EVi"/>
-                                                            <constraint firstAttribute="width" constant="230" id="VWt-UA-2WZ"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <state key="normal" title="Button">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="tapIntroductionButton:" destination="A52-EZ-iv1" eventType="touchUpInside" id="OwS-I3-J1J"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccj-XC-vWw">
+                                                <rect key="frame" x="0.0" y="574" width="414" height="100"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="SfA-1g-skh" firstAttribute="centerX" secondItem="E02-D3-RAc" secondAttribute="centerX" id="9dA-1E-mg7"/>
-                                                    <constraint firstAttribute="height" constant="150" id="EQw-ss-DGe"/>
-                                                    <constraint firstItem="SfA-1g-skh" firstAttribute="top" secondItem="YP0-5q-OKa" secondAttribute="bottom" constant="16" id="G9g-DS-eYJ"/>
-                                                    <constraint firstItem="YP0-5q-OKa" firstAttribute="top" secondItem="E02-D3-RAc" secondAttribute="top" constant="16" id="M0p-8V-psu"/>
-                                                    <constraint firstItem="YP0-5q-OKa" firstAttribute="leading" secondItem="E02-D3-RAc" secondAttribute="leading" constant="8" id="dmg-6h-3im"/>
-                                                    <constraint firstAttribute="trailing" secondItem="YP0-5q-OKa" secondAttribute="trailing" constant="8" id="l17-7X-5HK"/>
+                                                    <constraint firstAttribute="height" constant="100" id="9Hd-RN-cQm"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -161,8 +130,6 @@
                         <outlet property="groupImageView" destination="f4n-bb-oVe" id="Ksf-Uy-5Pb"/>
                         <outlet property="groupNameLabel" destination="xeO-SB-V4J" id="7bp-51-Dt2"/>
                         <outlet property="groupTaskLabel" destination="ft3-Ro-Bxs" id="gRe-L6-3Sb"/>
-                        <outlet property="introductionButton" destination="SfA-1g-skh" id="QXZ-qm-ZVm"/>
-                        <outlet property="introductionLabel" destination="YP0-5q-OKa" id="M1z-H1-jUZ"/>
                         <outlet property="scrollView" destination="9xU-Rn-w6k" id="yaW-y0-I7A"/>
                     </connections>
                 </viewController>
@@ -177,9 +144,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

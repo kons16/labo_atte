@@ -711,10 +711,10 @@
 		BFA78926252082A3003FE6D0 /* UserDetail */ = {
 			isa = PBXGroup;
 			children = (
-				BFA78927252082A3003FE6D0 /* UserDetailViewPresenter.swift */,
-				BFA78928252082A3003FE6D0 /* UserDetailViewModel.swift */,
 				BFA78929252082A3003FE6D0 /* UserDetailViewBuilder.swift */,
 				BFA7892A252082A3003FE6D0 /* UserDetailViewController.swift */,
+				BFA78927252082A3003FE6D0 /* UserDetailViewPresenter.swift */,
+				BFA78928252082A3003FE6D0 /* UserDetailViewModel.swift */,
 			);
 			path = UserDetail;
 			sourceTree = "<group>";

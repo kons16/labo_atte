@@ -15,7 +15,6 @@ protocol UserDetailViewPresenterProtocol {
     var todoList: [Todo] { get }
     
     func didViewDidLoad()
-    func didTapIntroductionButton()
     func didScrollViewDidScroll(height: Double)
     
     func getTheDayIsAWeekAgo(date: Date) -> Bool
@@ -31,7 +30,6 @@ protocol UserDetailViewPresenterOutput: class {
     func reloadCalenderView()
     func moveAndResizeImage(scale: Double, xTranslation: Double, yTranslation: Double)
     
-    func segueIntroductionShareTodoPlusVC()
 }
 
 final class UserDetailViewPresenter: UserDetailViewPresenterProtocol, UserDetailModelOutput {
@@ -54,10 +52,6 @@ final class UserDetailViewPresenter: UserDetailViewPresenterProtocol, UserDetail
         if let profileImageURL = URL(string: self.user.profileImageURL ?? "") { self.view.setProfileImage(profileImageURL) }
         if let groupImageURL = URL(string: self.group.profileImageURL ?? "") { self.view.setGroupImage(groupImageURL) }
         
-    }
-    
-    func didTapIntroductionButton() {
-        self.view.segueIntroductionShareTodoPlusVC()
     }
     
     func didScrollViewDidScroll(height: Double) {

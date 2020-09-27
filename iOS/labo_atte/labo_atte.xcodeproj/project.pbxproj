@@ -15,7 +15,6 @@
 		BF649FC3251F9BCD00A36711 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF649FC2251F9BCD00A36711 /* Assets.xcassets */; };
 		BF649FD1251F9BCE00A36711 /* labo_atteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FD0251F9BCE00A36711 /* labo_atteTests.swift */; };
 		BF649FDC251F9BCE00A36711 /* labo_atteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF649FDB251F9BCE00A36711 /* labo_atteUITests.swift */; };
-		BF649FFA2520428C00A36711 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BF649FF92520428C00A36711 /* .gitignore */; };
 		BF64A0172520450C00A36711 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = BF64A0152520450C00A36711 /* Podfile */; };
 		BF64A0182520450C00A36711 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = BF64A0162520450C00A36711 /* Cartfile */; };
 		BF64A01D2520455D00A36711 /* carthage.sh in Resources */ = {isa = PBXBuildFile; fileRef = BF64A01C2520455D00A36711 /* carthage.sh */; };
@@ -93,6 +92,7 @@
 		BFB59BE025205176008D66E6 /* FirestoreDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */; };
 		BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD125205176008D66E6 /* ServerTimestamp.swift */; };
 		BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDE9B5252054EC00DDBD44 /* R.generated.swift */; };
+		BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFEDE9D4252058D600DDBD44 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,7 +150,6 @@
 		BF649FD7251F9BCE00A36711 /* labo_atteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = labo_atteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF649FDB251F9BCE00A36711 /* labo_atteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = labo_atteUITests.swift; sourceTree = "<group>"; };
 		BF649FDD251F9BCE00A36711 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF649FF92520428C00A36711 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		BF64A0152520450C00A36711 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		BF64A0162520450C00A36711 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		BF64A01C2520455D00A36711 /* carthage.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = carthage.sh; sourceTree = "<group>"; };
@@ -223,6 +222,7 @@
 		BFB59BD025205176008D66E6 /* FirestoreDecoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirestoreDecoder.swift; sourceTree = "<group>"; };
 		BFB59BD125205176008D66E6 /* ServerTimestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTimestamp.swift; sourceTree = "<group>"; };
 		BFEDE9B5252054EC00DDBD44 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BFEDE9D4252058D600DDBD44 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		F078099504690E0EB40DD840 /* Pods-labo_atteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atteTests.debug.xcconfig"; path = "Target Support Files/Pods-labo_atteTests/Pods-labo_atteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -357,7 +357,7 @@
 				BF64A01C2520455D00A36711 /* carthage.sh */,
 				BF64A0162520450C00A36711 /* Cartfile */,
 				BF64A0152520450C00A36711 /* Podfile */,
-				BF649FF92520428C00A36711 /* .gitignore */,
+				BFEDE9D4252058D600DDBD44 /* .gitignore */,
 			);
 			name = Environment;
 			sourceTree = "<group>";
@@ -678,8 +678,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */,
 				BF64A0172520450C00A36711 /* Podfile in Resources */,
-				BF649FFA2520428C00A36711 /* .gitignore in Resources */,
 				BFB59BB325205049008D66E6 /* TodayTodo.storyboard in Resources */,
 				BF64A01D2520455D00A36711 /* carthage.sh in Resources */,
 				BF64A0C425204D3300A36711 /* MainTabBar.storyboard in Resources */,

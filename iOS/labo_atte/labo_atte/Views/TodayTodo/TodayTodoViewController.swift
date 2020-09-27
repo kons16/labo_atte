@@ -25,7 +25,7 @@ final class TodayTodoViewController: UIViewController {
         self.setupTodayTodoCollectionView()
         self.setupActivityIndicator()
         
-        //self.presenter.didViewDidLoad()
+        self.presenter.didViewDidLoad()
     }
     
     func setupView() {

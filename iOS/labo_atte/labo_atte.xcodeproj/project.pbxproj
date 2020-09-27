@@ -93,6 +93,7 @@
 		BFB59BE125205176008D66E6 /* ServerTimestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BD125205176008D66E6 /* ServerTimestamp.swift */; };
 		BFEDE9B6252054EC00DDBD44 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEDE9B5252054EC00DDBD44 /* R.generated.swift */; };
 		BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = BFEDE9D4252058D600DDBD44 /* .gitignore */; };
+		BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = BFF2D36F2520610F00EF87AE /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,7 @@
 		BFB59BD125205176008D66E6 /* ServerTimestamp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTimestamp.swift; sourceTree = "<group>"; };
 		BFEDE9B5252054EC00DDBD44 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BFEDE9D4252058D600DDBD44 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BFF2D36F2520610F00EF87AE /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		F078099504690E0EB40DD840 /* Pods-labo_atteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-labo_atteTests.debug.xcconfig"; path = "Target Support Files/Pods-labo_atteTests/Pods-labo_atteTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -354,6 +356,7 @@
 		BF649FF82520427B00A36711 /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				BFF2D36F2520610F00EF87AE /* .swiftlint.yml */,
 				BF64A01C2520455D00A36711 /* carthage.sh */,
 				BF64A0162520450C00A36711 /* Cartfile */,
 				BF64A0152520450C00A36711 /* Podfile */,
@@ -578,6 +581,7 @@
 				BF649FB2251F9BCB00A36711 /* Sources */,
 				BF649FB3251F9BCB00A36711 /* Frameworks */,
 				BF649FB4251F9BCB00A36711 /* Resources */,
+				BFF2D36C252060AA00EF87AE /* SwiftLint */,
 				BF64A0712520492D00A36711 /* GoogleInfo */,
 				BF64A09B25204BA000A36711 /* Carthage */,
 				BF64A089252049DC00A36711 /* Embed Frameworks */,
@@ -678,6 +682,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */,
 				BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */,
 				BF64A0172520450C00A36711 /* Podfile in Resources */,
 				BFB59BB325205049008D66E6 /* TodayTodo.storyboard in Resources */,
@@ -844,6 +849,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		BFF2D36C252060AA00EF87AE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"SwiftLint does not exist, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		EF3A783D2CEF1186A2F2FE78 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;

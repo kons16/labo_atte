@@ -16,7 +16,7 @@ protocol UserDetailModelProtocol {
     var todos: [Todo] { get set }
     
     func fetchTodoList()
-    func isTheDayAWeekAgo(date: Date) -> Bool
+    func isTheDayTwoWeekAgo(date: Date) -> Bool
     func getContaintFinishedDate(date: Date) -> Bool
     func calculateForNavigationImage(height: Double) -> (scale: Double, xTranslation: Double, yTranslation: Double)
 }
@@ -82,8 +82,8 @@ final class UserDetailModel: UserDetailModelProtocol {
         }
     }
     
-    func isTheDayAWeekAgo(date: Date) -> Bool {
-        let aWeekAgo = Date(timeIntervalSinceNow: -60 * 60 * 24 * 7)
+    func isTheDayTwoWeekAgo(date: Date) -> Bool {
+        let aWeekAgo = Date(timeIntervalSinceNow: -60 * 60 * 24 * 7 * 2)
         let tomorrow = Date(timeIntervalSinceNow: 60 * 60 * 24)
         return aWeekAgo < date && date < tomorrow
     }

@@ -193,15 +193,16 @@ extension UserDetailViewController: FSCalendarDelegate, FSCalendarDataSource {
         guard calenderView.maximumDate >= date else { return nil } //最小の日(今日)以降はnil
         guard calenderView.minimumDate <= date else { return nil } //最後の日和前はnil
         
-        //今日から1週間までは記録をする
-        if self.presenter.getTheDayIsAWeekAgo(date: date) {
+        //今日から2週間までは記録をする
+        if self.presenter.getTheDayIsTwoWeekAgo(date: date) {
             if self.presenter.getContaintFinishedDate(date: date) {
                 return UIImage(systemName: "checkmark.seal.fill")?.withTintColor(.systemGreen).withRenderingMode(.alwaysOriginal)
             }
             return UIImage(systemName: "xmark.seal.fill")?.withTintColor(.systemRed).withRenderingMode(.alwaysOriginal)
         }
         
-        //1週間より前はロック状態によって変化させる
-        return UIImage(systemName: "lock.fill")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+        //2週間より前はロック状態によって変化させる
+        return nil
+        //return UIImage(systemName: "lock.fill")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
     }
 }

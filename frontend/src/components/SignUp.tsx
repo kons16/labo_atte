@@ -5,6 +5,7 @@ import * as H from 'history';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 import firebase from 'firebase';
+import { env } from 'process';
 
 interface SignUpState {
     loading: boolean,
@@ -24,33 +25,34 @@ class SignUp extends Component<SignUpProps, SignUpState> {
 
     // Submitしたとき
     handleOnSubmit = (values: any) => {
-        //spinner表示開始
-        if (this._isMounted) this.setState({ loading: true });
-        //新規登録処理
-        firebase.auth().createUserWithEmailAndPassword(values.email, values.password)
-            .then(res => {  //正常終了時
-                //spinner表示終了
-                if (this._isMounted) this.setState({ loading: false });
+        if (values.labPassword == process.env.REACT_APP_LAB_PASSWORD) {
+            //spinner表示開始
+            if (this._isMounted) this.setState({ loading: true });
+            //新規登録処理
+            firebase.auth().createUserWithEmailAndPassword(values.email, values.password)
+                .then(res => {  //正常終了時
+                    //spinner表示終了
+                    if (this._isMounted) this.setState({ loading: false });
 
-                // firestore に user を保存
-                const db = firebase.firestore();
-                const user = firebase.auth().currentUser;
-                db.collection("todo/v1/users").doc(user?.uid).set({
-                    name: values.name,
-                    profileImageURL: null
-                })
+                    // firestore に user を保存
+                    const db = firebase.firestore();
+                    const user = firebase.auth().currentUser;
+                    db.collection("todo/v1/users").doc(user?.uid).set({
+                        name: values.name,
+                        profileImageURL: null
+                    })
 
-                firebase.auth().currentUser?.updateProfile({
-                    displayName: values.name
+                    firebase.auth().currentUser?.updateProfile({
+                        displayName: values.name
+                    })
+                    
+                    this.props.history.push("/");
                 })
-                
-                this.props.history.push("/");
-            })
-            .catch(error => { //異常終了時
-                if (this._isMounted) this.setState({ loading: false });
-                alert(error);
-            });
-        
+                .catch(error => { //異常終了時
+                    if (this._isMounted) this.setState({ loading: false });
+                    alert(error);
+                });
+        }
     }
 
     componentDidMount = () => {
@@ -67,11 +69,12 @@ class SignUp extends Component<SignUpProps, SignUpState> {
                 <div className="mx-auto" style={{ width: 400, background: '#eee', padding: 20, marginTop: 60 }}>
                     <p style={{ textAlign: 'center' }}>新規登録</p>
                     <Formik
-                        initialValues={{ email: '', password: '', name: '' }}
+                        initialValues={{ email: '', password: '', name: '', labPassword: ''}}
                         onSubmit={(values) => this.handleOnSubmit(values)}
                         validationSchema={Yup.object().shape({
                             email: Yup.string().email().required(),
                             password: Yup.string().required(),
+                            labPassword: Yup.string().required(),
                             name: Yup.string().required(),
                         })}
                     >
@@ -123,6 +126,22 @@ class SignUp extends Component<SignUpProps, SignUpState> {
                                             {errors.password}
                                         </FormFeedback>
                                     </FormGroup>
+                                    <FormGroup>
+                                        <Label for="labPassword">研究室パスワード</Label>
+                                        <Input
+                                            type="password"
+                                            name="labPassword"
+                                            id="labPassword"
+                                            value={values.labPassword}
+                                            onChange={handleChange}
+                                            onBlur={handleBlur}
+                                            invalid={touched.password && errors.password ? true : false}
+                                        />
+                                        <FormFeedback>
+                                            {errors.password}
+                                        </FormFeedback>
+                                    </FormGroup>
+
                                     <div style={{ textAlign: 'center' }}>
                                         <Button color="success" type="submit" disabled={this.state.loading}>
                                             <Spinner size="sm" color="light" style={{ marginRight: 5 }} hidden={!this.state.loading} />

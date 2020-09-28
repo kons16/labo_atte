@@ -25,7 +25,7 @@ class SignUp extends Component<SignUpProps, SignUpState> {
 
     // Submitしたとき
     handleOnSubmit = (values: any) => {
-        if (values.labPassword == process.env.REACT_APP_LAB_PASSWORD) {
+        if (values.labPassword === process.env.REACT_APP_LAB_PASSWORD) {
             //spinner表示開始
             if (this._isMounted) this.setState({ loading: true });
             //新規登録処理

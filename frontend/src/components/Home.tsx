@@ -12,6 +12,7 @@ interface HomeState {
     isLoaded: boolean,
     isAttend: boolean   // 出席しているかどうか
     users: any,
+    attendNum: number
 }
 
 // Home
@@ -23,6 +24,7 @@ class Home extends Component<{}, HomeState> {
         isLoaded: false,
         isAttend: false,
         users: [],
+        attendNum: 0
     };
 
     // 出席ユーザーを再取得する
@@ -30,6 +32,7 @@ class Home extends Component<{}, HomeState> {
         const db = firebase.firestore();
         const attendUserID: (string|undefined)[] = [];  // 出席しているユーザーID
         const attendUserData: any = [];                 // 出席しているユーザー情報
+        const user = firebase.auth().currentUser;
 
         // 出席者情報を取得
         const path = "todo/v1/groups/" + this.state.groupID + "/todo"
@@ -57,11 +60,19 @@ class Home extends Component<{}, HomeState> {
                     attendUserData.push(v.data())
                 })
             })
-            //console.log(attendUserData);
-            const userData: any[] = attendUserData;
-            this.setState({
-                users: userData
-            })
+
+            // 自分の出席情報も更新
+            if (attendUserID.includes(user?.uid)) {
+                this.setState({
+                    users: attendUserData,
+                    isAttend: true
+                })
+            } else {
+                this.setState({
+                    users: attendUserData,
+                    isAttend: false
+                })
+            }
         })
     }
 
@@ -120,9 +131,6 @@ class Home extends Component<{}, HomeState> {
         }, { merge: true } )
 
         this.resetUserData();
-        this.setState({
-            isAttend: true
-        })
     }
 
     handleDisAttend = () => {
@@ -147,16 +155,13 @@ class Home extends Component<{}, HomeState> {
         }, { merge: true } )
 
         this.resetUserData();
-        this.setState({
-            isAttend: false
-        })
     }
 
     // 出席ユーザーを更新する
     checkUsers = () => {
-        console.log(this.state.users);
         this.setState({
-            users: this.state.users
+            users: this.state.users,
+            attendNum: this.state.users.length
         })
     }
 
@@ -166,24 +171,30 @@ class Home extends Component<{}, HomeState> {
                 {(() => {
                     if (this.state.isLoaded) {
                         return (
-                            <h3>こんにちは、{this.state.name}さん</h3>
+                            <div>
+                                <h3>こんにちは、{this.state.name}さん</h3>
+                                <h4>現在の研究室出席者数 <div id="attend-num">{this.state.attendNum}人</div></h4>
+                            </div>
                         )
                     }
                 })()}
 
-                <h6>現在の研究室出席者を確認するにはリロードを押してください。</h6>
+                <br/>
+                <h6>現在の研究室出席者の確認、「出席」「帰宅」をクリックしたときはリロードを押してください。</h6>
 
                 {(() => {
                     if (this.state.isAttend) {
                         return (
                             <div>
                                 <Button color="warning" onClick={this.handleDisAttend}>帰宅</Button>
+                                <Button color="info" onClick={this.checkUsers} id="reload-btn" >リロード</Button>
                             </div>
                         )
                     } else {
                         return (
                             <div>
                                 <Button color="primary" onClick={this.handleAttend}>出席</Button>
+                                <Button color="info" onClick={this.checkUsers} id="reload-btn" >リロード</Button>
                             </div>
                         )
                     }
@@ -211,7 +222,6 @@ class Home extends Component<{}, HomeState> {
                 })()}
 
                 <br/>
-                <Button color="info" onClick={this.checkUsers}>リロード</Button><br/><br/>
                 <Button onClick={this.handleLogout}>ログアウト</Button>
                 <br/>
                 <br/>

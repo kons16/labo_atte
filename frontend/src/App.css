@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+#reload-btn {
+  margin-left: 20px;
+}
+
+#attend-num {
+  display:inline;
+  margin-left: 10px;
+  font-weight: bold;
+  color: blue;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

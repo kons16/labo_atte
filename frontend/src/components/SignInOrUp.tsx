@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, FormFeedback, Spinner } from 'reactstrap';
-import { Link, RouteComponentProps } from 'react-router-dom'
+import { Link, RouteComponentProps } from 'react-router-dom';
 import * as H from 'history';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -51,7 +51,7 @@ class SignInOrUp extends Component<SignInOrUpProps, SignInOrUpState> {
         return (
             <div className="container">
                 <div className="mx-auto" style={{ width: 400, background: '#eee', padding: 20, marginTop: 60 }}>
-                    <p style={{ textAlign: 'center' }}>サインイン</p>
+                    <p style={{ textAlign: 'center' }}>ログイン</p>
                     <Formik
                         initialValues={{ email: '', password: '' }}
                         onSubmit={(values) => this.handleOnSubmit(values)}

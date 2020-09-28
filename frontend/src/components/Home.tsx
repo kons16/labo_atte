@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
 import { Button } from 'reactstrap';
+import User from './User';
+
+var moment = require("moment");
 
 interface HomeState {
     name?: string | null | undefined,
     groupName?: string,
-    groupID?: string
+    groupID?: string,
     isLoaded: boolean,
     isAttend: boolean   // 出席しているかどうか
+    users: any,
 }
 
 // Home
@@ -17,8 +21,50 @@ class Home extends Component<{}, HomeState> {
         groupName: "",
         groupID: "",
         isLoaded: false,
-        isAttend: false
+        isAttend: false,
+        users: [],
     };
+
+    // 出席ユーザーを再取得する
+    resetUserData = () => {
+        const db = firebase.firestore();
+        const attendUserID: (string|undefined)[] = [];  // 出席しているユーザーID
+        const attendUserData: any = [];                 // 出席しているユーザー情報
+        const user = firebase.auth().currentUser;
+
+        // 出席者情報を取得
+        const path = "todo/v1/groups/" + this.state.groupID + "/todo"
+        let m1 = moment();
+        let m2 = moment();
+        m1.startOf('day');
+        m2.endOf('day');
+
+        const todos = db.collection(path).orderBy('createdAt')
+                            .where("createdAt", ">", m1.toDate())
+                            .where("createdAt", "<=", m2.toDate())
+                            .where("isAttended", "==", true)
+        todos.get().then(docs => {
+            docs.forEach(async(doc) => {
+                const userID = await doc.data()["userID"];
+                attendUserID.push(userID);
+            });
+        })
+        .then(v => {
+            // isAttendがtrueのユーザー情報を取得
+            const userPath = "todo/v1/users/"
+            attendUserID.forEach(userID => {
+                const users = db.collection(userPath).doc(userID)
+                users.get().then(v => {
+                    attendUserData.push(v.data())
+                })
+            })
+            //console.log(attendUserData);
+            const userData: any[] = attendUserData;
+            this.setState({
+                users: userData
+            })
+        })
+    }
 
     componentDidMount() {
         // 自分が所属しているグループを取得する
@@ -29,8 +75,6 @@ class Home extends Component<{}, HomeState> {
         const myGroups = groupRef.where("members", "array-contains", user?.uid);
         let groupName = "";
         let groupID = "";
-        const attendUserID: (string|undefined)[] = [];  // 出席しているユーザーID
-        const attendUserData: any[] = [];   // 出席しているユーザー情報
 
         myGroups.get().then(function(docs) {
             docs.forEach(function(doc) {
@@ -47,33 +91,7 @@ class Home extends Component<{}, HomeState> {
             });
         })
         .then(v => { 
-            // 出席者情報を取得
-            const path = "todo/v1/groups/" + this.state.groupID + "/todo"
-            const todos = db.collection(path).where("isAttended", "==", true)
-            todos.get().then(function(docs) {
-                docs.forEach(function(doc) {
-                    attendUserID.push(doc.data()["userID"])
-                });
-            })
-            .then(v => {
-                // isAttendがTrueのユーザー情報を取得
-                const userPath = "todo/v1/users/"
-                attendUserID.forEach(userID => {
-                    const users = db.collection(userPath).doc(userID)
-                    users.get().then(v => {
-                        attendUserData.push(v.data())
-                    })
-                })
-                console.log(attendUserData);
-            })
-            .then(v => {
-                // 自分のisAttendを確認し変更する 
-                if (attendUserID.includes(user?.uid)) {
-                    this.setState({
-                        isAttend: true
-                    })
-                }
-            })
+            this.resetUserData();
         });
     }
 
@@ -102,6 +120,7 @@ class Home extends Component<{}, HomeState> {
             userID: user?.uid
         }, { merge: true } )
 
+        this.resetUserData();
         this.setState({
             isAttend: true
         })
@@ -128,8 +147,17 @@ class Home extends Component<{}, HomeState> {
             userID: user?.uid
         }, { merge: true } )
 
+        this.resetUserData();
         this.setState({
             isAttend: false
+        })
+    }
+
+    // 出席ユーザーを更新する
+    checkUsers = () => {
+        console.log(this.state.users);
+        this.setState({
+            users: this.state.users
         })
     }
 
@@ -160,8 +188,29 @@ class Home extends Component<{}, HomeState> {
                     }
                 })()}
 
+                {(() => {
+                    const userItems: any[] = [];
+                    this.state.users.forEach((key: any, index: number) => {
+                        userItems.push(
+                            <User
+                                key={index}
+                                id={this.state.users[index].id}
+                                name={this.state.users[index].name}
+                                image={this.state.users[index].Image}
+                            />
+                        )
+                    });
+
+                    return (
+                        <div>
+                            {userItems}
+                        </div>
+                    )
+                })()}
+
                 <br/>
                 <Button onClick={this.handleLogout}>ログアウト</Button>
+                <Button onClick={this.checkUsers}>リロード</Button>
                 <br/>
                 <br/>
 

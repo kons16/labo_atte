@@ -30,7 +30,7 @@ class User extends Component<UserProps, UserState> {
     render() {
         return (
             <div id="user-component">
-                <div id="user-name">{this.state.user.name}</div>
+                <li>{this.state.user.name}</li>
                 <div id="user-image">{this.state.user.image}</div>
             </div>
         );

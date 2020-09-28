@@ -30,7 +30,6 @@ class Home extends Component<{}, HomeState> {
         const db = firebase.firestore();
         const attendUserID: (string|undefined)[] = [];  // 出席しているユーザーID
         const attendUserData: any = [];                 // 出席しているユーザー情報
-        const user = firebase.auth().currentUser;
 
         // 出席者情報を取得
         const path = "todo/v1/groups/" + this.state.groupID + "/todo"
@@ -172,6 +171,8 @@ class Home extends Component<{}, HomeState> {
                     }
                 })()}
 
+                <h6>現在の研究室出席者を確認するにはリロードを押してください。</h6>
+
                 {(() => {
                     if (this.state.isAttend) {
                         return (
@@ -203,14 +204,15 @@ class Home extends Component<{}, HomeState> {
 
                     return (
                         <div>
+                            <br/>
                             {userItems}
                         </div>
                     )
                 })()}
 
                 <br/>
+                <Button color="info" onClick={this.checkUsers}>リロード</Button><br/><br/>
                 <Button onClick={this.handleLogout}>ログアウト</Button>
-                <Button onClick={this.checkUsers}>リロード</Button>
                 <br/>
                 <br/>
 

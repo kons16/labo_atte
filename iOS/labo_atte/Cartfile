@@ -3,6 +3,10 @@ binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseAuthBinary.json"
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFirestoreBinary.json"
 binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseStorageBinary.json"
 
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseFunctionsBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseMessagingBinary.json"
+binary "https://dl.google.com/dl/firebase/ios/carthage/FirebaseProtobufBinary.json"
+
 github "TimOliver/TOCropViewController"
 github "vikmeup/SCLAlertView-Swift" "master"
 github "dzenbot/DZNEmptyDataSet"

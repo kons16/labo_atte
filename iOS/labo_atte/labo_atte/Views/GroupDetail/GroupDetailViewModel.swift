@@ -56,7 +56,7 @@ final class GroupDetailModel: GroupDetailModelProtocol {
         let startTime: Date = formatter.date(from: startDate) ?? Date(timeIntervalSince1970: 0)
         let startTimestamp: Timestamp = Timestamp(date: startTime)
         
-        self.listener = self.firestore.collection(collectionRef).whereField("createdAt", isGreaterThanOrEqualTo: startTimestamp).whereField("isFinished", isEqualTo: true).addSnapshotListener { [weak self] (documentSnapshot, error) in
+        self.listener = self.firestore.collection(collectionRef).whereField("createdAt", isGreaterThanOrEqualTo: startTimestamp).whereField("isAttended", isEqualTo: true).addSnapshotListener { [weak self] (documentSnapshot, error) in
             guard let self = self else { return }
             
             if let error = error {

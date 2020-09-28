@@ -60,7 +60,11 @@ class GroupDetailCollectionViewCell: UICollectionViewCell {
         self.nameLabel.text = user.name
         self.radioImageView.image = radioButtonImage
         
-        guard let url = URL(string: user.profileImageURL ?? "") else { return }
+        guard let url = URL(string: user.profileImageURL ?? "") else {
+            self.profileImageView.image = R.image.defaultProfileImage()
+            return
+        }
+        
         DispatchQueue.main.async {
             let options = ImageLoadingOptions(placeholder: R.image.placeholderImage(), transition: .fadeIn(duration: 0.25), failureImage: R.image.groupDefaultImage())
             loadImage(with: url, options: options, into: self.profileImageView, progress: nil, completion: nil)

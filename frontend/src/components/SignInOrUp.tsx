@@ -64,7 +64,7 @@ class SignInOrUp extends Component<SignInOrUpProps, SignInOrUpState> {
                             ({ handleSubmit, handleChange, handleBlur, values, errors, touched }) => (
                                 <Form onSubmit={handleSubmit}>
                                     <FormGroup>
-                                        <Label for="email">Email</Label>
+                                        <Label for="email">メールアドレス</Label>
                                         <Input
                                             type="email"
                                             name="email"
@@ -79,7 +79,7 @@ class SignInOrUp extends Component<SignInOrUpProps, SignInOrUpState> {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="password">Password</Label>
+                                        <Label for="password">パスワード</Label>
                                         <Input
                                             type="password"
                                             name="password"

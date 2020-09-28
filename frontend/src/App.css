@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+.container {
+  margin-top: 20px;
+}
+
 #reload-btn {
   margin-left: 20px;
 }

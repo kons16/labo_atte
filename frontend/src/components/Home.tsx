@@ -172,8 +172,8 @@ class Home extends Component<{}, HomeState> {
                     if (this.state.isLoaded) {
                         return (
                             <div>
-                                <h3>こんにちは、{this.state.name}さん</h3>
-                                <h4>現在の出席者数 <div id="attend-num">{this.state.attendNum}人</div></h4>
+                                <h3>こんにちは、{this.state.name}さん <br/>【 {this.state.groupName} 】</h3>
+                                <h4>現在の研究室出席者数 <div id="attend-num">{this.state.attendNum}人</div></h4>
                             </div>
                         )
                     }

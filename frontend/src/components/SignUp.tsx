@@ -97,7 +97,7 @@ class SignUp extends Component<SignUpProps, SignUpState> {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="email">Email</Label>
+                                        <Label for="email">メールアドレス</Label>
                                         <Input
                                             type="email"
                                             name="email"
@@ -112,7 +112,7 @@ class SignUp extends Component<SignUpProps, SignUpState> {
                                         </FormFeedback>
                                     </FormGroup>
                                     <FormGroup>
-                                        <Label for="password">Password</Label>
+                                        <Label for="password">パスワード</Label>
                                         <Input
                                             type="password"
                                             name="password"

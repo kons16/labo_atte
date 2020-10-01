@@ -91,6 +91,8 @@ extension TodayTodoViewController: TodayTodoViewPresenterOutput {
             
             guard granted == true else { return }
             
+            self.presenter.didAllowNotification()
+            
             DispatchQueue.main.async {
                 UIApplication.shared.registerForRemoteNotifications()
             }

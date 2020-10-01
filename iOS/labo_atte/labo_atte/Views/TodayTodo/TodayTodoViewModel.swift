@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseMessaging
 
 protocol TodayTodoModelProtocol {
     var presenter: TodayTodoModelOutput! { get set }
@@ -21,6 +22,8 @@ protocol TodayTodoModelProtocol {
     
     func unfinishedTodo(index: Int)
     func finishedTodo(index: Int)
+    
+    func setFcmToken()
 }
 
 protocol TodayTodoModelOutput: class {
@@ -193,6 +196,18 @@ final class TodayTodoModel: TodayTodoModelProtocol {
         } catch let error {
             print("Error: \(error.localizedDescription)")
             return
+        }
+    }
+    
+    func setFcmToken() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        guard let fcmToken = Messaging.messaging().fcmToken else { return }
+        
+        firestore.collection("todo/v1/users/").document(userID).updateData(["fcmToken": fcmToken]) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
         }
     }
     

@@ -40,24 +40,50 @@ struct SimpleEntry: TimelineEntry {
     let configuration: ConfigurationIntent
 }
 
-struct AttendingWidgetEntryView : View {
+struct AttendingWidgetEntryView: View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+        VStack(alignment: .leading, spacing: 8) {
+            Text("現在の人数")
+                .font(.system(.body, design: .rounded))
+                .fontWeight(.semibold)
+                .foregroundColor(.secondary)
+            HStack(alignment: .bottom) {
+                Text("2")
+                    .font(.system(.largeTitle, design: .rounded))
+                    .fontWeight(.heavy)
+                    .foregroundColor(.gray)
+                    .frame(height: 28.5)
+                
+                Text("人")
+                    .font(.system(.body, design: .rounded))
+                    .fontWeight(.bold)
+                    .foregroundColor(.gray)
+                    .multilineTextAlignment(.leading)
+            }
+            Spacer()
+            
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        
+        .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 0))
+        .foregroundColor(.gray)
+        
     }
 }
 
 @main
 struct AttendingWidget: Widget {
-    let kind: String = "AttendingWidget"
+    let kind: String = "今いる人数を確認"
 
     var body: some WidgetConfiguration {
         IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
             AttendingWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Labo Atte")
+        .description("今いる人数が表示されます。")
+        .supportedFamilies([.systemSmall])
     }
 }
 

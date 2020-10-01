@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         
+        UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
-        setRemoteNotification(application: application)
         
 
         return true
@@ -51,37 +51,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
-    func setRemoteNotification(application: UIApplication) {
-        UNUserNotificationCenter.current().delegate = self
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
-        application.registerForRemoteNotifications()
-    }
-    
-    
-    // アプリがフォアグラウンドで起動している際にプッシュ通知が届いたら呼ばれる。
+    // ForeGround
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge])
     }
     
-    // プッシュ通知に対しタッチ等のアクションを行った時に呼ばれる。
+    // response
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
     }
 }
 
 
 extension AppDelegate: MessagingDelegate {
-    // fcmTokenを受け取った時に呼ばれる。
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         if let uid = Auth.auth().currentUser?.uid {
-            print("FcmToken: \(fcmToken)")
-            self.setFcmToken(userId: uid, fcmToken: fcmToken)
+            print("fcmToken: \(fcmToken)")
+            self.setFcmToken(userID: uid, fcmToken: fcmToken)
         }
     }
     
-    func setFcmToken(userId: String, fcmToken: String) {
-        //let reference = Database.database().reference().child("user").child(userId).child("fcm_token")
-        //UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
-        //reference.setValue(fcmToken)
+    func setFcmToken(userID: String, fcmToken: String) {
+        let firestore = Firestore.firestore()
+        let settings = FirestoreSettings()
+        firestore.settings = settings
+        firestore.collection("todo/v1/users/").document(userID).updateData(["fcmToken": fcmToken]) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+        }
     }
 }

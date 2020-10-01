@@ -109,6 +109,7 @@
 		BFA78DEC2520AA40003FE6D0 /* FirebaseMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA78D222520AA1C003FE6D0 /* FirebaseMessaging.framework */; };
 		BFA792312520ABCE003FE6D0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA791AB2520AA86003FE6D0 /* FirebaseInstanceID.framework */; };
 		BFA7926E2520AE2F003FE6D0 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA7926D2520AE2F003FE6D0 /* Protobuf.framework */; };
+		BFA7931E2525D0F5003FE6D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFA793202525D0F5003FE6D0 /* Localizable.strings */; };
 		BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */; };
 		BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */; };
 		BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */; };
@@ -945,7 +946,6 @@
 		BFA789CB2520AA1A003FE6D0 /* TOCropScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropScrollView.h; sourceTree = "<group>"; };
 		BFA789CD2520AA1A003FE6D0 /* TOCropViewConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropViewConstants.h; sourceTree = "<group>"; };
 		BFA789D02520AA1A003FE6D0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
-		BFA789D12520AA1A003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		BFA789D22520AA1A003FE6D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		BFA789D32520AA1A003FE6D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		BFA789D42520AA1A003FE6D0 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -991,8 +991,6 @@
 		BFA78A002520AA1A003FE6D0 /* TOCropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropViewController.h; sourceTree = "<group>"; };
 		BFA78A022520AA1A003FE6D0 /* TOCropViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOCropViewControllerTests.m; sourceTree = "<group>"; };
 		BFA78A032520AA1A003FE6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFA78A062520AA1A003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		BFA78A082520AA1A003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		BFA78A092520AA1A003FE6D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFA78A0A2520AA1A003FE6D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFA78A0C2520AA1A003FE6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -1683,7 +1681,6 @@
 		BFA78E3C2520AA84003FE6D0 /* TOCropScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropScrollView.h; sourceTree = "<group>"; };
 		BFA78E3E2520AA84003FE6D0 /* TOCropViewConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropViewConstants.h; sourceTree = "<group>"; };
 		BFA78E412520AA84003FE6D0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
-		BFA78E422520AA84003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		BFA78E432520AA84003FE6D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/TOCropViewControllerLocalizable.strings"; sourceTree = "<group>"; };
 		BFA78E442520AA84003FE6D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		BFA78E452520AA84003FE6D0 /* fa */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fa; path = fa.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -1729,8 +1726,6 @@
 		BFA78E712520AA84003FE6D0 /* TOCropViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCropViewController.h; sourceTree = "<group>"; };
 		BFA78E732520AA84003FE6D0 /* TOCropViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOCropViewControllerTests.m; sourceTree = "<group>"; };
 		BFA78E742520AA84003FE6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BFA78E772520AA84003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		BFA78E792520AA84003FE6D0 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Main.strings; sourceTree = "<group>"; };
 		BFA78E7A2520AA84003FE6D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFA78E7B2520AA84003FE6D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFA78E7D2520AA84003FE6D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -2369,6 +2364,8 @@
 		BFA791B22520AA86003FE6D0 /* .FirebaseAnalyticsBinary.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .FirebaseAnalyticsBinary.version; sourceTree = "<group>"; };
 		BFA7926D2520AE2F003FE6D0 /* Protobuf.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Protobuf.framework; path = Carthage/Build/iOS/Protobuf.framework; sourceTree = "<group>"; };
 		BFA792782520B59A003FE6D0 /* labo_atte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = labo_atte.entitlements; sourceTree = "<group>"; };
+		BFA7931F2525D0F5003FE6D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFA793232525D0F9003FE6D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewController.swift; sourceTree = "<group>"; };
 		BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewModel.swift; sourceTree = "<group>"; };
@@ -2596,6 +2593,7 @@
 		BF64A001252042F200A36711 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BFA793112525D0D1003FE6D0 /* String */,
 				BF64A002252042F800A36711 /* Asset */,
 				BF64A003252042FE00A36711 /* GoogleInfo */,
 				BF64A0042520430200A36711 /* Info */,
@@ -7225,6 +7223,14 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
+		BFA793112525D0D1003FE6D0 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				BFA793202525D0F5003FE6D0 /* Localizable.strings */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		BFB59B9D25204FFB008D66E6 /* TodayTodo */ = {
 			isa = PBXGroup;
 			children = (
@@ -7413,7 +7419,6 @@
 				en,
 				Base,
 				de,
-				ar,
 				"zh-Hans",
 				ja,
 				fa,
@@ -7506,12 +7511,12 @@
 					ProjectRef = BFA78B082520AA1B003FE6D0 /* FSCalendarSwiftExample.xcodeproj */;
 				},
 				{
-					ProductGroup = BFA78CE62520AA1C003FE6D0 /* Products */;
-					ProjectRef = BFA78CE52520AA1C003FE6D0 /* Nuke.xcodeproj */;
-				},
-				{
 					ProductGroup = BFA791562520AA85003FE6D0 /* Products */;
 					ProjectRef = BFA791552520AA85003FE6D0 /* Nuke.xcodeproj */;
+				},
+				{
+					ProductGroup = BFA78CE62520AA1C003FE6D0 /* Products */;
+					ProjectRef = BFA78CE52520AA1C003FE6D0 /* Nuke.xcodeproj */;
 				},
 				{
 					ProductGroup = BFA790E22520AA85003FE6D0 /* Products */;
@@ -8204,6 +8209,7 @@
 				BFDBC8F125207E0400FD46AF /* CreateNewGroupInfo.storyboard in Resources */,
 				BFA78903252081AC003FE6D0 /* EditProfile.storyboard in Resources */,
 				BF64A0C425204D3300A36711 /* MainTabBar.storyboard in Resources */,
+				BFA7931E2525D0F5003FE6D0 /* Localizable.strings in Resources */,
 				BFA7896325208340003FE6D0 /* GroupDetail.storyboard in Resources */,
 				BF64A0182520450C00A36711 /* Cartfile in Resources */,
 				BF649FC3251F9BCD00A36711 /* Assets.xcassets in Resources */,
@@ -8557,7 +8563,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFA789D02520AA1A003FE6D0 /* de */,
-				BFA789D12520AA1A003FE6D0 /* ar */,
 				BFA789D22520AA1A003FE6D0 /* zh-Hans */,
 				BFA789D32520AA1A003FE6D0 /* ja */,
 				BFA789D42520AA1A003FE6D0 /* fa */,
@@ -8589,7 +8594,6 @@
 		BFA78A052520AA1A003FE6D0 /* LaunchScreen.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFA78A062520AA1A003FE6D0 /* ar */,
 				BFA78A132520AA1B003FE6D0 /* fr */,
 			);
 			name = LaunchScreen.strings;
@@ -8598,7 +8602,6 @@
 		BFA78A072520AA1A003FE6D0 /* Main.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFA78A082520AA1A003FE6D0 /* ar */,
 				BFA78A0F2520AA1A003FE6D0 /* tr */,
 				BFA78A142520AA1B003FE6D0 /* fr */,
 			);
@@ -8753,7 +8756,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFA78E412520AA84003FE6D0 /* de */,
-				BFA78E422520AA84003FE6D0 /* ar */,
 				BFA78E432520AA84003FE6D0 /* zh-Hans */,
 				BFA78E442520AA84003FE6D0 /* ja */,
 				BFA78E452520AA84003FE6D0 /* fa */,
@@ -8785,7 +8787,6 @@
 		BFA78E762520AA84003FE6D0 /* LaunchScreen.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFA78E772520AA84003FE6D0 /* ar */,
 				BFA78E842520AA84003FE6D0 /* fr */,
 			);
 			name = LaunchScreen.strings;
@@ -8794,7 +8795,6 @@
 		BFA78E782520AA84003FE6D0 /* Main.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				BFA78E792520AA84003FE6D0 /* ar */,
 				BFA78E802520AA84003FE6D0 /* tr */,
 				BFA78E852520AA84003FE6D0 /* fr */,
 			);
@@ -8929,6 +8929,15 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		BFA793202525D0F5003FE6D0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFA7931F2525D0F5003FE6D0 /* en */,
+				BFA793232525D0F9003FE6D0 /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -8984,7 +8993,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -9041,7 +9050,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-ObjC";

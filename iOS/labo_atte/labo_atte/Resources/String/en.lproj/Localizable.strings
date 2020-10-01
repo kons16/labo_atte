@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  labo_atte
+
+  Created by jun on 2020/10/01.
+  
+*/
+
+
+"ATTENDING_NOTIFICATION" = "Current number of people: %@";

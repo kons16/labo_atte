@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
         }
         
-        
+        application.applicationIconBadgeNumber = 0
         
         UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self

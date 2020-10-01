@@ -186,6 +186,11 @@ extension UserDetailViewController: FSCalendarDelegate, FSCalendarDataSource {
         
         //今日から2週間までは記録をする
         if self.presenter.getTheDayIsTwoWeekAgo(date: date) {
+            guard self.presenter.getThisUserVCisCurrentUsers() else {
+                return UIImage(systemName: "lock.fill")?.withTintColor(.systemOrange).withRenderingMode(.alwaysOriginal)
+            }
+            
+            
             if self.presenter.getContaintFinishedDate(date: date) {
                 return UIImage(systemName: "checkmark.seal.fill")?.withTintColor(.systemGreen).withRenderingMode(.alwaysOriginal)
             }

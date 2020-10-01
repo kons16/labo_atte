@@ -16,7 +16,8 @@ protocol UserDetailViewPresenterProtocol {
     
     func didViewDidLoad()
     func didScrollViewDidScroll(height: Double)
-    
+ 
+    func getThisUserVCisCurrentUsers() -> Bool
     func getTheDayIsTwoWeekAgo(date: Date) -> Bool
     func getContaintFinishedDate(date: Date) -> Bool
 }
@@ -57,6 +58,10 @@ final class UserDetailViewPresenter: UserDetailViewPresenterProtocol, UserDetail
     func didScrollViewDidScroll(height: Double) {
         let result = self.model.calculateForNavigationImage(height: height)
         self.view.moveAndResizeImage(scale: result.scale, xTranslation: result.xTranslation, yTranslation: result.yTranslation)
+    }
+    
+    func getThisUserVCisCurrentUsers() -> Bool {
+        return self.model.isThisUserVCCurrentUsers()
     }
     
     func getTheDayIsTwoWeekAgo(date: Date) -> Bool {

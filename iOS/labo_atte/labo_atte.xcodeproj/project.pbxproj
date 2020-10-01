@@ -110,6 +110,13 @@
 		BFA792312520ABCE003FE6D0 /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA791AB2520AA86003FE6D0 /* FirebaseInstanceID.framework */; };
 		BFA7926E2520AE2F003FE6D0 /* Protobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA7926D2520AE2F003FE6D0 /* Protobuf.framework */; };
 		BFA7931E2525D0F5003FE6D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BFA793202525D0F5003FE6D0 /* Localizable.strings */; };
+		BFA793882525D7E0003FE6D0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA793872525D7E0003FE6D0 /* WidgetKit.framework */; };
+		BFA7938A2525D7E0003FE6D0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA793892525D7E0003FE6D0 /* SwiftUI.framework */; };
+		BFA7938D2525D7E0003FE6D0 /* AttendingWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA7938C2525D7E0003FE6D0 /* AttendingWidget.swift */; };
+		BFA793902525D7E1003FE6D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA7938F2525D7E1003FE6D0 /* Assets.xcassets */; };
+		BFA793922525D7E1003FE6D0 /* AttendingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BFA7938E2525D7E0003FE6D0 /* AttendingWidget.intentdefinition */; };
+		BFA793932525D7E1003FE6D0 /* AttendingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = BFA7938E2525D7E0003FE6D0 /* AttendingWidget.intentdefinition */; };
+		BFA793962525D7E1003FE6D0 /* AttendingWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BFA793862525D7E0003FE6D0 /* AttendingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BFB59BA325205006008D66E6 /* TodayTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */; };
 		BFB59BA425205006008D66E6 /* TodayTodoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */; };
 		BFB59BA525205006008D66E6 /* TodayTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */; };
@@ -766,6 +773,13 @@
 			remoteGlobalIDString = 4F6E68401B5EA3A800986BC6;
 			remoteInfo = WebBrowser;
 		};
+		BFA793942525D7E1003FE6D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF649FAE251F9BCB00A36711 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFA793852525D7E0003FE6D0;
+			remoteInfo = AttendingWidgetExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -782,6 +796,17 @@
 				BF64A091252049F000A36711 /* FSCalendar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFA7939A2525D7E1003FE6D0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				BFA793962525D7E1003FE6D0 /* AttendingWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -2366,6 +2391,13 @@
 		BFA792782520B59A003FE6D0 /* labo_atte.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = labo_atte.entitlements; sourceTree = "<group>"; };
 		BFA7931F2525D0F5003FE6D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BFA793232525D0F9003FE6D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BFA793862525D7E0003FE6D0 /* AttendingWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AttendingWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFA793872525D7E0003FE6D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		BFA793892525D7E0003FE6D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		BFA7938C2525D7E0003FE6D0 /* AttendingWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendingWidget.swift; sourceTree = "<group>"; };
+		BFA7938E2525D7E0003FE6D0 /* AttendingWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = AttendingWidget.intentdefinition; sourceTree = "<group>"; };
+		BFA7938F2525D7E1003FE6D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFA793912525D7E1003FE6D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFB59B9E25205006008D66E6 /* TodayTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewController.swift; sourceTree = "<group>"; };
 		BFB59B9F25205006008D66E6 /* TodayTodoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BFB59BA025205006008D66E6 /* TodayTodoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayTodoViewModel.swift; sourceTree = "<group>"; };
@@ -2478,6 +2510,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFA793832525D7E0003FE6D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA7938A2525D7E0003FE6D0 /* SwiftUI.framework in Frameworks */,
+				BFA793882525D7E0003FE6D0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -2501,6 +2542,7 @@
 				BF649FB8251F9BCB00A36711 /* labo_atte */,
 				BF649FCF251F9BCE00A36711 /* labo_atteTests */,
 				BF649FDA251F9BCE00A36711 /* labo_atteUITests */,
+				BFA7938B2525D7E0003FE6D0 /* AttendingWidget */,
 				BF649FB7251F9BCB00A36711 /* Products */,
 				BF64A0212520485400A36711 /* Frameworks */,
 				A6AEDC41D056A63EA74B08EC /* Pods */,
@@ -2513,6 +2555,7 @@
 				BF649FB6251F9BCB00A36711 /* labo_atte.app */,
 				BF649FCC251F9BCE00A36711 /* labo_atteTests.xctest */,
 				BF649FD7251F9BCE00A36711 /* labo_atteUITests.xctest */,
+				BFA793862525D7E0003FE6D0 /* AttendingWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -2673,6 +2716,8 @@
 				8C90140AFBAE522CB48D0606 /* Pods_labo_atte.framework */,
 				762A0223E466180A7AF82A89 /* Pods_labo_atte_labo_atteUITests.framework */,
 				022A4D6365417D924F775985 /* Pods_labo_atteTests.framework */,
+				BFA793872525D7E0003FE6D0 /* WidgetKit.framework */,
+				BFA793892525D7E0003FE6D0 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -7231,6 +7276,17 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		BFA7938B2525D7E0003FE6D0 /* AttendingWidget */ = {
+			isa = PBXGroup;
+			children = (
+				BFA7938C2525D7E0003FE6D0 /* AttendingWidget.swift */,
+				BFA7938E2525D7E0003FE6D0 /* AttendingWidget.intentdefinition */,
+				BFA7938F2525D7E1003FE6D0 /* Assets.xcassets */,
+				BFA793912525D7E1003FE6D0 /* Info.plist */,
+			);
+			path = AttendingWidget;
+			sourceTree = "<group>";
+		};
 		BFB59B9D25204FFB008D66E6 /* TodayTodo */ = {
 			isa = PBXGroup;
 			children = (
@@ -7340,10 +7396,12 @@
 				BF64A09B25204BA000A36711 /* Carthage */,
 				BF64A089252049DC00A36711 /* Embed Frameworks */,
 				EF3A783D2CEF1186A2F2FE78 /* [CP] Embed Pods Frameworks */,
+				BFA7939A2525D7E1003FE6D0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				BFA793952525D7E1003FE6D0 /* PBXTargetDependency */,
 			);
 			name = labo_atte;
 			productName = labo_atte;
@@ -7389,6 +7447,23 @@
 			productReference = BF649FD7251F9BCE00A36711 /* labo_atteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		BFA793852525D7E0003FE6D0 /* AttendingWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFA793972525D7E1003FE6D0 /* Build configuration list for PBXNativeTarget "AttendingWidgetExtension" */;
+			buildPhases = (
+				BFA793822525D7E0003FE6D0 /* Sources */,
+				BFA793832525D7E0003FE6D0 /* Frameworks */,
+				BFA793842525D7E0003FE6D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AttendingWidgetExtension;
+			productName = AttendingWidgetExtension;
+			productReference = BFA793862525D7E0003FE6D0 /* AttendingWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -7408,6 +7483,9 @@
 					BF649FD6251F9BCE00A36711 = {
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = BF649FB5251F9BCB00A36711;
+					};
+					BFA793852525D7E0003FE6D0 = {
+						CreatedOnToolsVersion = 12.0;
 					};
 				};
 			};
@@ -7596,6 +7674,7 @@
 				BF649FB5251F9BCB00A36711 /* labo_atte */,
 				BF649FCB251F9BCE00A36711 /* labo_atteTests */,
 				BF649FD6251F9BCE00A36711 /* labo_atteUITests */,
+				BFA793852525D7E0003FE6D0 /* AttendingWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -8235,6 +8314,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFA793842525D7E0003FE6D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA793902525D7E1003FE6D0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -8473,6 +8560,7 @@
 				BFA7895925208335003FE6D0 /* GroupDetailViewBuilder.swift in Sources */,
 				BFB59BBE25205161008D66E6 /* Todo.swift in Sources */,
 				BF64A0A125204C7400A36711 /* Routes.swift in Sources */,
+				BFA793932525D7E1003FE6D0 /* AttendingWidget.intentdefinition in Sources */,
 				BFB59BD425205176008D66E6 /* ExplicitNull.swift in Sources */,
 				BFA7895825208335003FE6D0 /* GroupDetailCollectionReusableView.swift in Sources */,
 				BF64A0BE25204D0C00A36711 /* ExTextField.swift in Sources */,
@@ -8527,6 +8615,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BFA793822525D7E0003FE6D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFA793922525D7E1003FE6D0 /* AttendingWidget.intentdefinition in Sources */,
+				BFA7938D2525D7E0003FE6D0 /* AttendingWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -8539,6 +8636,11 @@
 			isa = PBXTargetDependency;
 			target = BF649FB5251F9BCB00A36711 /* labo_atte */;
 			targetProxy = BF649FD8251F9BCE00A36711 /* PBXContainerItemProxy */;
+		};
+		BFA793952525D7E1003FE6D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFA793852525D7E0003FE6D0 /* AttendingWidgetExtension */;
+			targetProxy = BFA793942525D7E1003FE6D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -9065,6 +9167,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5DA451735FFB2CA4435EAF3F /* Pods-labo_atte.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = labo_atte/labo_atte.entitlements;
@@ -9091,6 +9194,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4513C12366773741CE470EC3 /* Pods-labo_atte.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = labo_atte/labo_atte.entitlements;
@@ -9201,6 +9305,50 @@
 			};
 			name = Release;
 		};
+		BFA793982525D7E1003FE6D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R4W53MKG7;
+				INFOPLIST_FILE = AttendingWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Taped.labo-atte.AttendingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFA793992525D7E1003FE6D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9R4W53MKG7;
+				INFOPLIST_FILE = AttendingWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Taped.labo-atte.AttendingWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -9236,6 +9384,15 @@
 			buildConfigurations = (
 				BF649FE7251F9BCE00A36711 /* Debug */,
 				BF649FE8251F9BCE00A36711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFA793972525D7E1003FE6D0 /* Build configuration list for PBXNativeTarget "AttendingWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFA793982525D7E1003FE6D0 /* Debug */,
+				BFA793992525D7E1003FE6D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

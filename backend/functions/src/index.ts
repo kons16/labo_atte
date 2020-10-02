@@ -8,6 +8,19 @@ const firestore = admin.firestore();
 // const firebase_tools = require('firebase-tools');
 
 
+async function ChangeIsAttendNumberSilentPushNotification(currentNumOfAttendees: string, fcmToken: string) {
+    const message = {
+        notification: {
+            content_available: 'true'
+        },
+        data: {
+            "currentNumOfAttendees": currentNumOfAttendees
+        }
+    };
+
+    return admin.messaging().sendToDevice(fcmToken, message)
+}
+
 //@ts-ignore TS6133: 'req' is declared but its value is never read.
 async function ChangeIsAttendNumberPushNotification(currentNumOfAttendees: string, fcmToken: string) {
     const Message = {
@@ -25,8 +38,8 @@ async function ChangeIsAttendNumberPushNotification(currentNumOfAttendees: strin
                         name: "message_send_009.wav",
                     },
                     alert: {
-                        titleLocKey: "ATTENDING_NOTIFICATION",
-                        titleLocArgs: [currentNumOfAttendees],
+                        locKey: "ATTENDING_NOTIFICATION_BODY",
+                        locArgs: [currentNumOfAttendees],
                     }
                 }
             },
@@ -140,6 +153,9 @@ export const onUpdateIsAttend = functions.firestore.document('/todo/v1/groups/{g
 
         for (var fcmToken of membersFcmTokens) {
             ChangeIsAttendNumberPushNotification(atttendingUserID.length.toString(), fcmToken)
+            .catch(() => 'catch')
+
+            ChangeIsAttendNumberSilentPushNotification(atttendingUserID.length.toString(), fcmToken)
             .catch(() => 'catch')
         }
         

@@ -46,18 +46,18 @@ struct AttendingWidgetEntryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             Text("現在の人数")
-                .font(.system(.body, design: .rounded))
-                .fontWeight(.semibold)
+                .font(.custom("Hiragino Maru Gothic ProN", size: 16))
+                .fontWeight(.bold)
                 .foregroundColor(.secondary)
             HStack(alignment: .bottom) {
                 Text("2")
                     .font(.system(.largeTitle, design: .rounded))
                     .fontWeight(.heavy)
                     .foregroundColor(.gray)
-                    .frame(height: 28.5)
+                    .frame(height: 27)
                 
                 Text("人")
-                    .font(.system(.body, design: .rounded))
+                    .font(.custom("Hiragino Maru Gothic ProN", size: 18))
                     .fontWeight(.bold)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.leading)

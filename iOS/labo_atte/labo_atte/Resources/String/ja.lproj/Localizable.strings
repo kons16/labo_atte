@@ -7,4 +7,4 @@
 */
 
 
-"ATTENDING_NOTIFICATION" = "現在の人数: %@人";
+"ATTENDING_NOTIFICATION_BODY" = "現在の人数: %@人";

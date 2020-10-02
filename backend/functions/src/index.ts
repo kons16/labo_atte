@@ -22,7 +22,7 @@ async function ChangeIsAttendNumberPushNotification(currentNumOfAttendees: strin
                     },
 
                     sound: {
-                        name: "default",
+                        name: "message_send_009.wav",
                     },
                     alert: {
                         titleLocKey: "ATTENDING_NOTIFICATION",
@@ -52,7 +52,7 @@ export const onUpdateIsAttend = functions.firestore.document('/todo/v1/groups/{g
         const todayDate: Date = new Date(todayStr);
         const todayTimestamp = admin.firestore.Timestamp.fromDate(todayDate);
 
-        const atttendingUserID: string[] = [];
+        let atttendingUserID: string[] = [];
 
         console.log('attendingのユーザの取得開始');
 
@@ -73,9 +73,12 @@ export const onUpdateIsAttend = functions.firestore.document('/todo/v1/groups/{g
             .catch(error => {
                 console.log(error);
             })
+
+        atttendingUserID = [...new Set(atttendingUserID)];
         
         console.log('attendingのユーザの取得完了');
         console.log('attendingのユーザ数: ', atttendingUserID.length);
+        console.log('attendingのユーザ: ', atttendingUserID);
 
         const documentRef = '/todo/v1/groups/' + groupID
         var groupMembersID: string[] = [];

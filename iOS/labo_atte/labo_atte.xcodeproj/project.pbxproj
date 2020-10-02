@@ -64,6 +64,7 @@
 		BF64A0BF25204D0C00A36711 /* ExCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64A0B725204D0C00A36711 /* ExCollectionView.swift */; };
 		BF64A0C025204D0C00A36711 /* ExString.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF64A0B925204D0C00A36711 /* ExString.swift */; };
 		BF64A0C425204D3300A36711 /* MainTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF64A0C325204D3300A36711 /* MainTabBar.storyboard */; };
+		BF96D4A02526C9D60094437C /* message_send_009.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF96D49F2526C9D60094437C /* message_send_009.wav */; };
 		BFA788FC25208194003FE6D0 /* EditProfileViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA788F825208193003FE6D0 /* EditProfileViewPresenter.swift */; };
 		BFA788FD25208194003FE6D0 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA788F925208193003FE6D0 /* EditProfileViewController.swift */; };
 		BFA788FE25208194003FE6D0 /* EditProfileViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA788FA25208193003FE6D0 /* EditProfileViewBuilder.swift */; };
@@ -877,6 +878,7 @@
 		BF64A0B725204D0C00A36711 /* ExCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExCollectionView.swift; sourceTree = "<group>"; };
 		BF64A0B925204D0C00A36711 /* ExString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 		BF64A0C325204D3300A36711 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
+		BF96D49F2526C9D60094437C /* message_send_009.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = message_send_009.wav; sourceTree = "<group>"; };
 		BFA788F825208193003FE6D0 /* EditProfileViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewPresenter.swift; sourceTree = "<group>"; };
 		BFA788F925208193003FE6D0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		BFA788FA25208193003FE6D0 /* EditProfileViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewBuilder.swift; sourceTree = "<group>"; };
@@ -2637,6 +2639,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA793112525D0D1003FE6D0 /* String */,
+				BF96D49E2526C9B90094437C /* Sounds */,
 				BF64A002252042F800A36711 /* Asset */,
 				BF64A003252042FE00A36711 /* GoogleInfo */,
 				BF64A0042520430200A36711 /* Info */,
@@ -2789,6 +2792,14 @@
 				BF64A0B925204D0C00A36711 /* ExString.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		BF96D49E2526C9B90094437C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				BF96D49F2526C9D60094437C /* message_send_009.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		BFA788F725208193003FE6D0 /* EditProfile */ = {
@@ -8276,6 +8287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA78932252082AE003FE6D0 /* UserDetail.storyboard in Resources */,
+				BF96D4A02526C9D60094437C /* message_send_009.wav in Resources */,
 				BFF2D3702520610F00EF87AE /* .swiftlint.yml in Resources */,
 				BFA7895625208335003FE6D0 /* GroupDetailCollectionViewUserCell.xib in Resources */,
 				BFEDE9D5252058D600DDBD44 /* .gitignore in Resources */,

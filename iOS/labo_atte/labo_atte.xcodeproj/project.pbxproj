@@ -879,6 +879,7 @@
 		BF64A0B925204D0C00A36711 /* ExString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExString.swift; sourceTree = "<group>"; };
 		BF64A0C325204D3300A36711 /* MainTabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabBar.storyboard; sourceTree = "<group>"; };
 		BF96D49F2526C9D60094437C /* message_send_009.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = message_send_009.wav; sourceTree = "<group>"; };
+		BF96D4A62526EF280094437C /* AttendingWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AttendingWidgetExtension.entitlements; sourceTree = "<group>"; };
 		BFA788F825208193003FE6D0 /* EditProfileViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewPresenter.swift; sourceTree = "<group>"; };
 		BFA788F925208193003FE6D0 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		BFA788FA25208193003FE6D0 /* EditProfileViewBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewBuilder.swift; sourceTree = "<group>"; };
@@ -2540,6 +2541,7 @@
 		BF649FAD251F9BCB00A36711 = {
 			isa = PBXGroup;
 			children = (
+				BF96D4A62526EF280094437C /* AttendingWidgetExtension.entitlements */,
 				BF649FF82520427B00A36711 /* Environment */,
 				BF649FB8251F9BCB00A36711 /* labo_atte */,
 				BF649FCF251F9BCE00A36711 /* labo_atteTests */,
@@ -9322,6 +9324,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AttendingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = AttendingWidget/Info.plist;
@@ -9344,6 +9347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = AttendingWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9R4W53MKG7;
 				INFOPLIST_FILE = AttendingWidget/Info.plist;

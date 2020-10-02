@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 import Firebase
 import FirebaseMessaging
 import UserNotifications
@@ -49,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("didReceiveRemoteNotification")
         guard let currentNumOfAttendeesStr = userInfo["currentNumOfAttendees"] as? String else {
             completionHandler(.noData)
             return
@@ -58,8 +60,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
         
-        UserDefaults.standard.set(currentNumOfAttendeesNum, forKey: "currentNumOfAttendees")
-        completionHandler(.newData)
+        if #available(iOS 14.0, *) {
+            let userDefaults = UserDefaults(suiteName: "group.com.Taped.labo-atte")
+            if let userDefaults = userDefaults {
+                userDefaults.synchronize()
+                userDefaults.set(currentNumOfAttendeesNum, forKey: "currentNumOfAttendees")
+                WidgetCenter.shared.reloadAllTimelines()
+                print("success set default == ", currentNumOfAttendeesNum)
+                completionHandler(.newData)
+            } else {
+                completionHandler(.failed)
+            }
+            
+        } else {
+            completionHandler(.noData)
+        }
     }
 
 }

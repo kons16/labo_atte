@@ -10,34 +10,46 @@ import SwiftUI
 import Intents
 
 struct Provider: IntentTimelineProvider {
+    let userDefaults = UserDefaults(suiteName: "group.com.Taped.labo-atte")
+    
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), currentAttendingNum: 0)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+        
+        guard let num = userDefaults?.object(forKey: "currentNumOfAttendees") as? Int else {
+            let entry = SimpleEntry(date: Date(), currentAttendingNum: -1)
+            completion(entry)
+            return
+        }
+        let entry = SimpleEntry(date: Date(), currentAttendingNum: num)
         completion(entry)
     }
 
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
-        let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+        
+        if let num = userDefaults?.object(forKey: "currentNumOfAttendees") as? Int {
+            let entry = SimpleEntry(date: Date(), currentAttendingNum: num)
+            entries.append(entry)
+        } else {
+            let entry = SimpleEntry(date: Date(), currentAttendingNum: -1)
             entries.append(entry)
         }
 
+        
+        
         let timeline = Timeline(entries: entries, policy: .atEnd)
         completion(timeline)
     }
 }
 
+
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationIntent
+    var currentAttendingNum: Int
 }
 
 struct AttendingWidgetEntryView: View {
@@ -50,7 +62,8 @@ struct AttendingWidgetEntryView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.secondary)
             HStack(alignment: .bottom) {
-                Text("2")
+                let str = entry.currentAttendingNum == -1 ? "-" : String(entry.currentAttendingNum)
+                Text(String(str))
                     .font(.system(.largeTitle, design: .rounded))
                     .fontWeight(.heavy)
                     .foregroundColor(.gray)
@@ -66,7 +79,6 @@ struct AttendingWidgetEntryView: View {
             
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        
         .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 0))
         .foregroundColor(.gray)
         
@@ -89,7 +101,7 @@ struct AttendingWidget: Widget {
 
 struct AttendingWidget_Previews: PreviewProvider {
     static var previews: some View {
-        AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), currentAttendingNum: 0))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

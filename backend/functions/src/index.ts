@@ -18,6 +18,8 @@ async function ChangeIsAttendNumberSilentPushNotification(currentNumOfAttendees:
         }
     };
 
+
+
     return admin.messaging().sendToDevice(fcmToken, message)
 }
 

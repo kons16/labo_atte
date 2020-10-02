@@ -14,7 +14,7 @@ struct Provider: IntentTimelineProvider {
     
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), currentAttendingNum: 0)
+        SimpleEntry(date: Date(), currentAttendingNum: -1)
     }
 
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
@@ -77,6 +77,15 @@ struct AttendingWidgetEntryView: View {
             }
             Spacer()
             
+            if entry.currentAttendingNum >= 5 {
+                Text("最大の人数に達しています")
+                    .font(.custom("Hiragino Maru Gothic ProN", size: 12))
+                    .foregroundColor(.secondary)
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 8))
+            }
+            
+            
+            
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 0))
@@ -103,5 +112,16 @@ struct AttendingWidget_Previews: PreviewProvider {
     static var previews: some View {
         AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), currentAttendingNum: 0))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
+        AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), currentAttendingNum: 5))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        
+        AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), currentAttendingNum: 4))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .environment(\.colorScheme, .dark)
+        
+        AttendingWidgetEntryView(entry: SimpleEntry(date: Date(), currentAttendingNum: 7))
+            .previewContext(WidgetPreviewContext(family: .systemSmall))
+            .environment(\.colorScheme, .dark)
     }
 }

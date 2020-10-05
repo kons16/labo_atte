@@ -7,6 +7,7 @@
 //
 
 import Firebase
+import FirebaseMessaging
 
 protocol TodayTodoModelProtocol {
     var presenter: TodayTodoModelOutput! { get set }
@@ -21,6 +22,8 @@ protocol TodayTodoModelProtocol {
     
     func unfinishedTodo(index: Int)
     func finishedTodo(index: Int)
+    
+    func setFcmToken()
 }
 
 protocol TodayTodoModelOutput: class {
@@ -47,7 +50,7 @@ final class TodayTodoModel: TodayTodoModelProtocol {
     func setUpFirestore() {
         self.firestore = Firestore.firestore()
         let settings = FirestoreSettings()
-        //self.firestore.settings = settings
+        self.firestore.settings = settings
     }
     
     func fetchGroups() {
@@ -196,9 +199,19 @@ final class TodayTodoModel: TodayTodoModelProtocol {
         }
     }
     
+    func setFcmToken() {
+        guard let userID = Auth.auth().currentUser?.uid else { return }
+        guard let fcmToken = Messaging.messaging().fcmToken else { return }
+        
+        firestore.collection("todo/v1/users/").document(userID).updateData(["fcmToken": fcmToken]) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+        }
+    }
+    
     func isFirstOpen() -> Bool {
-        //TODO:- 実装後に以下の一文を取り除くこと
-        return true
         UserDefaults.standard.register(defaults: ["isFirstOpen": true])
         if !UserDefaults.standard.bool(forKey: "isFirstOpen") { return false }
         

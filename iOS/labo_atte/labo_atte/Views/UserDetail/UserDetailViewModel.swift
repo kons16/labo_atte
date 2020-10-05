@@ -16,6 +16,7 @@ protocol UserDetailModelProtocol {
     var todos: [Todo] { get set }
     
     func fetchTodoList()
+    func isThisUserVCCurrentUsers() -> Bool
     func isTheDayTwoWeekAgo(date: Date) -> Bool
     func getContaintFinishedDate(date: Date) -> Bool
     func calculateForNavigationImage(height: Double) -> (scale: Double, xTranslation: Double, yTranslation: Double)
@@ -80,6 +81,13 @@ final class UserDetailModel: UserDetailModelProtocol {
             
             self.presenter.successFetchTodoList()
         }
+    }
+    
+    func isThisUserVCCurrentUsers() -> Bool {
+        guard let userID = Auth.auth().currentUser?.uid else { return false }
+        guard let curentVCUsersID = self.user.id else { return false }
+        guard userID == curentVCUsersID else { return false }
+        return true
     }
     
     func isTheDayTwoWeekAgo(date: Date) -> Bool {

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import WidgetKit
 import Firebase
 import FirebaseMessaging
 import UserNotifications
@@ -23,10 +24,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window?.makeKeyAndVisible()
         }
         
+        application.applicationIconBadgeNumber = 0
         
-        
+        UNUserNotificationCenter.current().delegate = self
         Messaging.messaging().delegate = self
-        setRemoteNotification(application: application)
         
 
         return true
@@ -45,43 +46,80 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("didReceiveRemoteNotification")
+        guard let currentNumOfAttendeesStr = userInfo["currentNumOfAttendees"] as? String else {
+            completionHandler(.noData)
+            return
+        }
+        guard let currentNumOfAttendeesNum = Int(currentNumOfAttendeesStr) else {
+            completionHandler(.failed)
+            return
+        }
+        
+        if #available(iOS 14.0, *) {
+            let userDefaults = UserDefaults(suiteName: "group.com.Taped.labo-atte")
+            if let userDefaults = userDefaults {
+                userDefaults.synchronize()
+                userDefaults.set(currentNumOfAttendeesNum, forKey: "currentNumOfAttendees")
+                WidgetCenter.shared.reloadAllTimelines()
+                print("success set default == ", currentNumOfAttendeesNum)
+                completionHandler(.newData)
+            } else {
+                completionHandler(.failed)
+            }
+            
+        } else {
+            completionHandler(.noData)
+        }
+    }
 
 }
 
 
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
-    func setRemoteNotification(application: UIApplication) {
-        UNUserNotificationCenter.current().delegate = self
-        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
-        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
-        application.registerForRemoteNotifications()
-    }
-    
-    
-    // アプリがフォアグラウンドで起動している際にプッシュ通知が届いたら呼ばれる。
+    // ForeGround
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert, .sound, .badge])
+        if #available(iOS 14, *) {
+            completionHandler([.banner, .sound])
+        } else {
+            completionHandler([.alert, .sound])
+        }
+        
     }
     
-    // プッシュ通知に対しタッチ等のアクションを行った時に呼ばれる。
+    // response
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        
+
     }
+    
+    
 }
 
 
 extension AppDelegate: MessagingDelegate {
-    // fcmTokenを受け取った時に呼ばれる。
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
         if let uid = Auth.auth().currentUser?.uid {
-            print("FcmToken: \(fcmToken)")
-            self.setFcmToken(userId: uid, fcmToken: fcmToken)
+            print("fcmToken: \(fcmToken)")
+            self.setFcmToken(userID: uid, fcmToken: fcmToken)
         }
     }
     
-    func setFcmToken(userId: String, fcmToken: String) {
-        //let reference = Database.database().reference().child("user").child(userId).child("fcm_token")
-        //UserDefaults.standard.set(fcmToken, forKey: "fcmToken")
-        //reference.setValue(fcmToken)
+    func setFcmToken(userID: String, fcmToken: String) {
+        let firestore = Firestore.firestore()
+        let settings = FirestoreSettings()
+        firestore.settings = settings
+        firestore.collection("todo/v1/users/").document(userID).updateData(["fcmToken": fcmToken]) { error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+        }
     }
 }

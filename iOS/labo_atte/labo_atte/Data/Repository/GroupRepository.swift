@@ -46,7 +46,7 @@ class GroupRepository: GroupRepositoryProtocol {
            
                 GroupDataStore.groupDataStore.append(group: group)
             } catch let error {
-                print("Error happen.")
+                print("Error: \(error.localizedDescription)")
             }
         }
     }
